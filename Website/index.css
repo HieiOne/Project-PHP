@@ -9,6 +9,13 @@
     background-color: #53301A;
     color: #ccb179;
     font-size: 18px;
+    font-weight: bold;
+}
+
+.logo-position { /* Position and size */
+    float: left;
+    width: 105px;
+    height: 65px;
 }
 
 .top-bar-navigation a {
@@ -16,7 +23,7 @@
     display: block;
     color: #ccb179;
     text-align: center;
-    padding: 1% 4%;
+    padding: 2% 0%;
     text-decoration: none;
 }
 
@@ -26,12 +33,12 @@
 }
 
 .login {
-    margin-left: 30%;
+    margin-left: 20%;
 }
 
 .search-bar {
     float: left;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 0% 4.5%
 }
 
@@ -44,10 +51,10 @@ input[type=text] {
     background-image: url('searchicon.png');
     background-position: 10px 10px; 
     background-repeat: no-repeat;
-    padding: 1% 3% 1% 20px;
+    padding: 2% 3% 2% 20px;
 }
 
-::placeholder {
+::placeholder { /* Text inside Search bar */
     color: #ccb179;
 }
 
