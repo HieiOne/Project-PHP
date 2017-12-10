@@ -89,7 +89,7 @@ input[type=text] {
 
 .menu-bar {
     width: 100%;
-    height: 100px;
+    height: 115px;
     background-color: #ccb179;
     border: 1px solid black;
 }
@@ -99,6 +99,13 @@ input[type=text] {
     width: 25%;
     height: 100%;
     border: 1px solid black;
+}
+
+.categories-position {
+    display: block;
+    margin: auto;
+    width: 90px;
+    height: 90px;
 }
 
 .menu-bar-promotions {
