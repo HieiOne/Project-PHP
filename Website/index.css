@@ -21,24 +21,24 @@
 }
 
 .lupa-position {
-    float: left;
     margin-top: 0.75%;
     margin-left: 1%;
     width: 30px;
     height: 30px;
-    margin-right: 3%;
+
 }
 
 .login-position {
-    float: left;
+	position: absolute;
+	right: 6%;
     margin-top: 0.75%;
-    margin-left: 1%;
     width: 35px;
     height: 35px;
 }
 
 .cart-position {
-    float: left;
+	position: absolute;
+	right: 1%;
     margin-top: 0.75%;
     width: 80px;
     height: 37px;
@@ -62,14 +62,10 @@
     margin-left: 5%;
 }
 
-.cart {
-    margin-left: 5%;
-}
-
 .search-bar {
     float: left;
-    margin-left: 10%;
     margin-top: 0.75%;
+	margin-left: 25%;
 }
 
 input[type=text] {
