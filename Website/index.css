@@ -1,28 +1,28 @@
 /* Top Bar */
 
 .top-bar {
-
+    width: 100%;
+    height: 100%;
 }
 
 .top-bar-navigation {
     overflow: hidden;
     background-color: #53301A;
     color: #ccb179;
-    font-size: 18px;
     font-weight: bold;
 }
 
 .logo-position { /* Position and size */
     float: left;
     display: block;
-    margin-top: 4px;
+    margin-top: 0.5%;
     width: 105px;
     height: 65px;
 }
 
 .lupa-position {
     float: left;
-    margin-top: 20px;
+    margin-top: 1.5%;
     margin-left: 20%;
     width: 30px;
     height: 30px;
@@ -31,7 +31,7 @@
 
 .login-position {
     float: left;
-    margin-top: 20px;
+    margin-top: 1.5%;
     margin-left: 1%;
     width: 35px;
     height: 35px;
@@ -39,7 +39,7 @@
 
 .cart-position {
     float: left;
-    margin-top: 20px;
+    margin-top: 1.5%;
     width: 80px;
     height: 37px;
 }
@@ -68,9 +68,9 @@
 
 .search-bar {
     float: left;
-    margin-left: 3%;
-    margin-top: 20px;
-    padding: 0% 4.5%
+    margin-left: 4.5%;
+    margin-top: 1.5%;
+    margin-right: 4.5%;
 }
 
 input[type=text] {
@@ -96,4 +96,5 @@ input[type=text] {
 body {
     margin: 0%;
     background-color: #efe4b0;
+    font-size: 18px;
 }
