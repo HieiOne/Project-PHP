@@ -24,7 +24,6 @@
 	position: absolute;
 	right: 38%;
     margin-top: 0.75%;
-    margin-left: 1%;
     width: 30px;
     height: 30px;
 
@@ -33,7 +32,7 @@
 .login-position {
 	position: absolute;
 	right: 5%;
-	margin-right: 1%;
+	margin-right: 2%;
     margin-top: 0.75%;
     width: 35px;
     height: 35px;
@@ -66,6 +65,7 @@
 	right: 40%;
     float: left;
     margin-top: 0.75%;
+	margin-right: 1%;
 }
 
 input[type=text] {
