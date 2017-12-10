@@ -21,6 +21,8 @@
 }
 
 .lupa-position {
+	position: absolute;
+	right: 38%;
     margin-top: 0.75%;
     margin-left: 1%;
     width: 30px;
@@ -30,7 +32,8 @@
 
 .login-position {
 	position: absolute;
-	right: 6%;
+	right: 5%;
+	margin-right: 1%;
     margin-top: 0.75%;
     width: 35px;
     height: 35px;
@@ -58,14 +61,11 @@
     color: #ccb179;
 }
 
-.login {
-    margin-left: 5%;
-}
-
 .search-bar {
+	position: absolute;
+	right: 40%;
     float: left;
     margin-top: 0.75%;
-	margin-left: 20%;
 }
 
 input[type=text] {
