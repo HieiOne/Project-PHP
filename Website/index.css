@@ -1,7 +1,8 @@
 /* Top Bar */
 
 .top-bar {
-
+    width: 100%;
+    height: 100%;
 }
 
 .top-bar-navigation {
@@ -14,14 +15,14 @@
 .logo-position { /* Position and size */
     float: left;
     display: block;
-    margin-top: 0.222em;
-    width: 5.833em;
-    height: 3.611em;
+    margin-top: 0.5%;
+    width: 105px;
+    height: 65px;
 }
 
 .lupa-position {
     float: left;
-    margin-top: 20px;
+    margin-top: 1.5%;
     margin-left: 20%;
     width: 30px;
     height: 30px;
@@ -30,7 +31,7 @@
 
 .login-position {
     float: left;
-    margin-top: 20px;
+    margin-top: 1.5%;
     margin-left: 1%;
     width: 35px;
     height: 35px;
@@ -38,7 +39,7 @@
 
 .cart-position {
     float: left;
-    margin-top: 20px;
+    margin-top: 1.5%;
     width: 80px;
     height: 37px;
 }
@@ -68,7 +69,7 @@
 .search-bar {
     float: left;
     margin-left: 3%;
-    margin-top: 20px;
+    margin-top: 1.5%;
     padding: 0% 4.5%
 }
 
