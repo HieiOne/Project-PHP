@@ -8,16 +8,15 @@
     overflow: hidden;
     background-color: #53301A;
     color: #ccb179;
-    font-size: 18px;
     font-weight: bold;
 }
 
 .logo-position { /* Position and size */
     float: left;
     display: block;
-    margin-top: 4px;
-    width: 105px;
-    height: 65px;
+    margin-top: 0.222em;
+    width: 5.833em;
+    height: 3.611em;
 }
 
 .lupa-position {
@@ -96,4 +95,5 @@ input[type=text] {
 body {
     margin: 0%;
     background-color: #efe4b0;
+    font-size: 18px;
 }
