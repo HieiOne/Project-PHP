@@ -32,8 +32,7 @@
 
 .login-position {
 	position: absolute;
-	right: 4.2%;
-	margin-right: 2%;
+	right: 4.5%;
     margin-top: 0.75%;
     width: 35px;
     height: 35px;
@@ -43,7 +42,7 @@
 	position: absolute;
 	right: 1%;
     margin-top: 0.75%;
-    width: 80px;
+    width: 42px;
     height: 37px;
 }
 
