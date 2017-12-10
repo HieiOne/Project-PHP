@@ -2,7 +2,6 @@
 
 .top-bar {
     width: 100%;
-    
 }
 
 .top-bar-navigation {
@@ -10,7 +9,7 @@
     background-color: #53301A;
     color: #ccb179;
     font-weight: bold;
-    height: 73px;
+    height: 75px;
 }
 
 .logo-position { /* Position and size */
