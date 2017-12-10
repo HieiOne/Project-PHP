@@ -9,20 +9,20 @@
     background-color: #53301A;
     color: #ccb179;
     font-weight: bold;
-    height: 75px;
+
 }
 
 .logo-position { /* Position and size */
     float: left;
     display: block;
-    margin-top: 0.5%;
+    margin-top: 0.25%;
     width: 105px;
-    height: 65px;
+    height: 55px;
 }
 
 .lupa-position {
     float: left;
-    margin-top: 1.5%;
+    margin-top: 0.75%;
     margin-left: 1%;
     width: 30px;
     height: 30px;
@@ -31,7 +31,7 @@
 
 .login-position {
     float: left;
-    margin-top: 1.5%;
+    margin-top: 0.75%;
     margin-left: 1%;
     width: 35px;
     height: 35px;
@@ -39,7 +39,7 @@
 
 .cart-position {
     float: left;
-    margin-top: 1.5%;
+    margin-top: 0.75%;
     width: 80px;
     height: 37px;
 }
@@ -49,7 +49,7 @@
     display: block;
     color: #ccb179;
     text-align: center;
-    padding: 2% 0%;
+    padding: 1% 0%;
     text-decoration: none;
 }
 
@@ -69,7 +69,7 @@
 .search-bar {
     float: left;
     margin-left: 10%;
-    margin-top: 1%;
+    margin-top: 0.75%;
 }
 
 input[type=text] {
@@ -81,7 +81,7 @@ input[type=text] {
     background-image: url('searchicon.png');
     background-position: 10px 10px; 
     background-repeat: no-repeat;
-    padding: 2% 3% 2% 20px;
+    padding: 1% 3% 1% 20px;
 }
 
 ::placeholder { /* Text inside Search bar */
