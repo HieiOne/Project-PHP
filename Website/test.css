@@ -60,7 +60,10 @@
         border: 3px solid #ccb179;
         font-size: 16px;
         background-color: #53301A;
-        padding: 1% 3% 1% 20px;
+		background-image: url("img/Lupa3.jpg");
+		background-repeat: no-repeat;
+		background-position: 10px 5px;
+        padding: 1% 3% 1% 40px;
     }
     
     ::placeholder { /* Text inside Search bar */
