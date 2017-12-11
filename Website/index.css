@@ -1,88 +1,94 @@
 /* Top Bar */
+    /* Logo */ 
+    .top-bar {
+        overflow: hidden;
+        width: 100%;
+        height: 65px;
+        background-color: #53301A;
+        color: #ccb179;
+        font-weight: bold;
+        text-align: center;
+    }
 
-.top-bar {
-    width: 100%;
-}
+    .top-bar-logo {
+        float: left;
+        width: 20%;
+        height: 100%;
+        line-height: 65px;
+    }
 
-.top-bar-navigation {
-    overflow: hidden;
-    background-color: #53301A;
-    color: #ccb179;
-    font-weight: bold;
+    .top-bar-logo-position { /* Position and size */
+        display: block;
+        float: left;
+        width: 35%;
+        height: 100%;
+    }
 
-}
+    .top-bar-logo-text {
+        text-decoration: none;
+        color: #ccb179;
+    }
 
-.logo-position { /* Position and size */
-    float: left;
-    display: block;
-    margin-top: 0.25%;
-    width: 105px;
-    height: 55px;
-}
+    .top-bar-logo:hover {
+        background-color: black;
+    }
 
-.lupa-position {
-	position: absolute;
-	right: 37.5%;
-    margin-top: 0.75%;
-    width: 30px;
-    height: 30px;
+    /* End of Logo */
 
-}
+    /* Search Bar */
+    
+    .top-bar-search {
+        float: left;
+        width: 65%;
+        height: 65px;
+        line-height: 65px;
+    }
 
-.login-position {
-	position: absolute;
-	right: 5%;
-    margin-top: 0.75%;
-    width: 35px;
-    height: 35px;
-}
+    input[type=text] { /* Format of search bar */
+        width: 500px;
+        height: 40px;
+        box-sizing: border-box;
+        border: 3px solid #ccb179;
+        font-size: 16px;
+        background-color: #53301A;
+		background-image: url("img/Lupa3.jpg");
+		background-repeat: no-repeat;
+		background-position: 10px 5px;
+        padding: 1% 3% 1% 40px;
+    }
+    
+    ::placeholder { /* Text inside Search bar */
+        font-weight: bold;
+        color: #ccb179;
+    }
 
-.cart-position {
-	position: absolute;
-	right: 1%;
-    margin-top: 0.75%;
-    width: 42px;
-    height: 37px;
-}
+    /* End of Search Bar */
 
-.top-bar-navigation a {
-    float: left;
-    display: block;
-    color: #ccb179;
-    text-align: center;
-    padding: 1% 0%;
-    text-decoration: none;
-}
+    /* Buttons of Login and Cart */
+    .top-bar-buttons {
+        float: left;
+        width: 15%;
+        height: 65px;
+        line-height: 65px;
+        vertical-align: middle;
+    }
 
-.top-bar-navigation a:hover {
-    background-color: black;
-    color: #ccb179;
-}
+    .top-bar-buttons-login {
+        width: 40px;
+        height: 40px;
+		line-height: 65px;
+        vertical-align: middle;
+    }
 
-.search-bar {
-	position: absolute;
-	right: 39%;
-    float: left;
-    margin-top: 0.75%;
-	margin-right: 1%;
-}
+    .top-bar-buttons-cart {
+		margin-left: 10%;
+        width: 40px;
+        height: 40px;
+		line-height: 65px;
+        vertical-align: middle;
+    }
 
-input[type=text] {
-    width: 500px;
-    box-sizing: border-box;
-    border: 3px solid #ccb179;
-    font-size: 16px;
-    background-color: #53301A;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 1% 3% 1% 20px;
-}
-
-::placeholder { /* Text inside Search bar */
-    color: #ccb179;
-}
-
+    /* End of buttons */
 /* End of Top Bar */
 
 /* Menu Bar */
