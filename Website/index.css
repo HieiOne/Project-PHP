@@ -93,32 +93,36 @@
 
 /* Menu Bar */
 
-.menu-bar {
-    width: 100%;
-    height: 115px;
-    background-color: #ccb179;
-}
+    .menu-bar {
+        width: 100%;
+        height: 115px;
+        background-color: #ccb179;
+    }
 
-.menu-bar-categories {
-    float: left;
-    width: 25%;
-    height: 100%;
-}
+    .menu-bar-categories {
+        float: left;
+        width: 25%;
+        height: 100%;
+    }
 
-.images-position {
-    display: block;
-    margin: auto;
-    margin-top: 2%;
-    width: 70px;
-    height: 70px;
-}
+    .menu-bar-categories:hover {
+        background-color: black;
+    }
 
-.text-position {
-    margin-top: 2%;
-    color: #53301A;
-    font-weight: bold;
-    text-align: center;
-}
+    .images-position {
+        display: block;
+        margin: auto;
+        margin-top: 2%;
+        width: 70px;
+        height: 70px;
+    }
+
+    .text-position {
+        margin-top: 2%;
+        color: #53301A;
+        font-weight: bold;
+        text-align: center;
+    }
 
 /* End of Menu Bar */
 
