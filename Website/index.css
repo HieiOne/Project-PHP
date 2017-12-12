@@ -25,6 +25,8 @@
     }
 
     .top-bar-logo-text {
+        display: table-cell;
+        vertical-align: middle;
         text-decoration: none;
         color: #ccb179;
     }
