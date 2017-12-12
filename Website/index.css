@@ -26,7 +26,7 @@
 
     .top-bar-logo-text {
         display: table-cell;
-        vertical-align: middle;
+        text-align: center;
         text-decoration: none;
         color: #ccb179;
     }
@@ -110,7 +110,12 @@
     .menu-bar-categories:hover {
         background-color: black;
     }
-
+    
+    .socialnetwork-images {
+        height: 32px;
+        width: 32px;
+    }
+    
     .images-position {
         display: block;
         margin: auto;
@@ -125,6 +130,7 @@
         font-weight: bold;
         text-align: center;
     }
+
 
 /* End of Menu Bar */
 
