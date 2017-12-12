@@ -49,7 +49,7 @@
     }
 
     input[type=text] { /* Format of search bar */
-        width: 500px;
+        width: 50%;
         height: 40px;
         box-sizing: border-box;
         border: 3px solid #ccb179;
