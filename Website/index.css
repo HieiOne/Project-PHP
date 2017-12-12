@@ -18,9 +18,11 @@
     }
 
     .top-bar-logo-position { /* Position and size */
+		margin-left: 2%;
+		margin-right: 5%;
         display: block;
         float: left;
-        width: 35%;
+        width: 20%;
         height: 100%;
     }
 
@@ -32,7 +34,7 @@
     }
 
     .top-bar-logo:hover {
-        background-color: black;
+        background-color: #522507;
     }
 
     /* End of Logo */
@@ -108,7 +110,7 @@
     }
 
     .menu-bar-categories:hover {
-        background-color: black;
+        background-color: #b59d66;
     }
     
     .socialnetwork-images {
