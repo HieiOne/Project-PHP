@@ -1,9 +1,10 @@
 /* Top Bar */
     /* Logo */ 
     .top-bar {
-        overflow: hidden;
+		overflow: hidden;
         width: 100%;
         height: 65px;
+		max-height: 65px;
         background-color: #53301A;
         color: #ccb179;
         font-weight: bold;
@@ -23,6 +24,7 @@
         display: block;
         float: left;
         width: 20%;
+		min-width: 65px;
         height: 100%;
     }
 
@@ -43,7 +45,7 @@
     
     .top-bar-search {
         float: left;
-        width: 65%;
+        width: 60%;
         height: 65px;
         line-height: 65px;
     }
@@ -70,8 +72,9 @@
 
     /* Buttons of Login and Cart */
     .top-bar-buttons {
+		overflow: auto;
         float: left;
-        width: 15%;
+        width: 20%;
         height: 65px;
         line-height: 65px;
         vertical-align: middle;
@@ -103,12 +106,47 @@
         background-color: #ccb179;
     }
 
+	.menu-bar a { /* To remove the underline of Categories */
+		text-decoration: none;
+	}
+	
     .menu-bar-categories {
         float: left;
         width: 25%;
         height: 100%;
     }
+	
+	/* Drop Menu */
+		.drop-menu { /* To adjust the dropdown menu */
+			position: relative;
+			display: block;
+		}
+		
+		.drop-content {
+			display: none;
+			position: absolute;
+			background-color: #ccb179;
+			min-width: 60%;
+			z-index: 1; /* To show itself over other items */
+		}
 
+		.drop-content-links { /*Links inside dropdown */
+			padding: 3% 2%;
+			color: #53301A;
+			font-weight: bold;
+			text-decoration: none;
+			display: block;
+		}
+		
+		.drop-content a:hover { /* Change on hover */
+			background-color: #b59d66;
+		}
+		
+		.drop-menu:hover .drop-content {
+			display: block;
+		}
+	/* End of Drop Menu */
+	
     .menu-bar-categories:hover {
         background-color: #b59d66;
     }
@@ -128,11 +166,11 @@
 
     .text-position {
         margin-top: 2%;
+		margin-bottom: 1%;
         color: #53301A;
         font-weight: bold;
         text-align: center;
     }
-
 
 /* End of Menu Bar */
 
