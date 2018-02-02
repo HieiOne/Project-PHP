@@ -1,0 +1,9 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-image: url("../img/background/dragon.jpg");
+    background-color: #53301A;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
