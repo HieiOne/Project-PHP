@@ -1,5 +1,5 @@
 <html>
-    <a href="../index.html"><div class="imagen"></div></a>
+    <a href="../index.php"><div class="imagen"></div></a>
     <link rel="stylesheet" href="login.css">
     <head>
         <title>Library of Nalanda</title>
@@ -12,7 +12,7 @@
     <?php //Detects if a session is loged, if it is show a message
         session_start();
         if($_SESSION['id'] != NULL) { //!=
-            echo "<a href='../index.html'><p class='session'>Sesion abierta...</p></a>";
+            header("Location: ../panel/panel_control.php");
             exit;
         }
 

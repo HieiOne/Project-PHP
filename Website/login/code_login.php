@@ -11,14 +11,15 @@
     $usuario = $_POST['usuario'];
     $password = $_POST['passwd'];
 
-    $consulta = "SELECT id,password FROM clientes WHERE usuario = '$usuario'";
+    $consulta = "SELECT id,password,usuario FROM clientes WHERE usuario = '$usuario'";
     $result = mysqli_query($db,$consulta);
     $linea = mysqli_fetch_array($result);
     
     if (password_verify($password,$linea['password'])) {
         session_start();
         $_SESSION['id'] = $linea['id'];
-        header("Location: ../index.html");
+        $_SESSION['usuario'] = $linea['usuario'];
+        header("Location: ../index.php");
     }
     else {
         session_start();

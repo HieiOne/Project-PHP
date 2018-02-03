@@ -67,7 +67,7 @@
     
     .top-bar-search {
         float: left;
-        width: 60%;
+        width: 55%;
         height: 65px;
         line-height: 65px;
     }
@@ -219,4 +219,19 @@ body{
 html {
 	height: 100%;
 	margin: 0%;
+}
+
+.welcome-message {
+    position: absolute;
+    margin: auto;
+    width: 120px;
+    top: 0;
+    bottom: 10;
+    left: 50;
+    right: 0;
+    margin-right: 29%;
+    line-height: 25px;
+    margin-top: 0.5%;
+    vertical-align: middle;
+    text-align: center;
 }

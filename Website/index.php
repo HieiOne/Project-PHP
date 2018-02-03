@@ -26,6 +26,14 @@
                         <input type="text" name="search" placeholder="Search by title, author...">
                 </form>
             </div>
+
+            <?php //Welcome Message
+                session_start();
+                if ($_SESSION['id'] != NULL) {
+                    echo '<span class="welcome-message"> Bienvenido '.$_SESSION['usuario'].'</span>';
+                }
+            ?>
+
             <div class="top-bar-buttons">
                 <a href="login/login.php"><img class="top-bar-buttons-login" src="img/Login1.png" alt="Login"></a>                    
                 <a href="#"><img class="top-bar-buttons-cart" src="img/Cart1.png" alt="Cart"></a>                                   
