@@ -47,7 +47,6 @@ body {
 }
 
 .tab-login:hover {
-    background-color: black;
     cursor: pointer;
 }
 
@@ -68,20 +67,30 @@ body {
 }
 
 .tab-register:hover {
-    background-color: black;
     cursor: pointer;
 }
 
-input[type=checkbox] {
+input[type=checkbox] + .tab-login{
+    background-color: black;
+    display: block;
+}
+
+input[type=checkbox]:checked + .tab-login {
+    display: block;
+    background-color: #ccb179;
+}
+
+input[type=checkbox]:checked + .tab-login + .tab-register{
+    display: block;
+    background-color: black;
+}
+
+input[type=checkbox]:checked + .tab-login + .tab-register + .formulario-register +.formulario-login{
     display: none;
 }
 
-input[type=checkbox]:checked + .formulario-register + .formulario-login {
-    display: none;
-}
-
-input[type=checkbox]:checked + .formulario-register {
-	display: block;
+input[type=checkbox]:checked + .tab-login + .tab-register + .formulario-register{
+    display: block;
 }
 
 .formulario-login {

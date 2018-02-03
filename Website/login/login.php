@@ -30,9 +30,9 @@
         }
     ?>
 
+        <input type="checkbox" id="toogle">
         <label for="toogle" class="tab-login">Login</label>
         <label for="toogle" class="tab-register">Register</label>
-        <input type="checkbox" id="toogle">
 
         <div class="formulario-register">
                 <form action="code_register.php" method="post">
