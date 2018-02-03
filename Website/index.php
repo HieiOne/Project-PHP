@@ -37,10 +37,14 @@
             <div class="top-bar-buttons">
                 <div class="login-dropdown">
                     <a href="login/login.php"><img class="top-bar-buttons-login" src="img/Login1.png" alt="Login"></a>
-                    <div class="login-dropdown-content">
-                        <a class="login-drop-content-links" href="login/login.php">Panel de Control</a>
-						<a class="login-drop-content-links" href="login/sessiondestroy.php">Logout</a>
-                    </div>
+                    <?php
+                        if ($_SESSION['id'] != NULL) {
+                                echo '<div class="login-dropdown-content">';
+                                echo '<a class="login-drop-content-links" href="login/login.php">Panel de Control</a>';
+                                echo '<a class="login-drop-content-links" href="login/sessiondestroy.php">Logout</a>';
+                                echo '</div>';
+                            }
+                        ?>
                 </div>
 
                 <a href="#"><img class="top-bar-buttons-cart" src="img/Cart1.png" alt="Cart"></a>                                   
