@@ -1,4 +1,11 @@
 html {
+	margin: 0;
+}
+body {
+    margin: 0;
+}
+
+.imagen {
     height: 100%;
     width: 100%;
     background-position: center;
@@ -6,6 +13,7 @@ html {
     background-color: #53301A;
     background-repeat: no-repeat;
     background-size: contain;
+
 }
 
 .login {
@@ -180,4 +188,43 @@ input[name=rep_passwd] {
     margin: auto;
     text-align: right;
     color: #53301A
+}
+
+.session {
+    color: #53301A;
+    position: absolute;
+    top: 100;
+    left: 100;
+    margin: auto;
+    font-size: 70px;
+}
+
+.fallido {
+    color: red;
+    top: 75;
+    left: 200;
+    margin: auto;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fallido_register {
+    color: red;
+    top: 75;
+    left: 150;
+    margin: auto;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.success_register {
+    color: green;
+    top: 75;
+    left: 210;
+    margin: auto;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
 }
