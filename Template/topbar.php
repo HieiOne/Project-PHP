@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  <!-- COMPLETAMENTE NECESARIO -->
 <!-- ESTE CÓDIGO DEBE AJUSTARSE -->
 <html>
     <link rel="stylesheet" href="topbar.css">
