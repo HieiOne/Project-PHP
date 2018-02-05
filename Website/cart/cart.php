@@ -14,10 +14,12 @@
         $_SESSION['cart']=array();
     }
 
-    if(isset($_POST['Remove'])) { // Borrar elemento del carrito, BUGGED
+    if(isset($_POST['Remove'])) { // Borrar elemento del carrito, BUGGED: Parece que no encuentra el valor
         $val = $_POST['Remove'];
-        if (($key = array_search($val, array_column($_SESSION['cart'], 0))) !== false) { // Busca por la key del valor
-            unset($_SESSION['cart'][$key]);
+        foreach($_SESSION['cart'] as $key => $value) { // Busca por la key del valor
+            if (in_array($val, $value)) {
+                unset($_SESSION['cart'][$key]);
+            }
         }
     }
 
@@ -35,19 +37,23 @@
 
     if(isset($_POST['AddQuantity'])) { // Añadir 1 a la cantidad
         $val = $_POST['AddQuantity'];
-        if (($key = array_search($val, array_column($_SESSION['cart'], 0))) !== false) { // Busca por la key del valor
-            $_SESSION['cart'][$key][1]++;
+        foreach($_SESSION['cart'] as $key => $value) { // Busca por la key del valor
+            if (in_array($val, $value)) {
+                $_SESSION['cart'][$key][1]++;
+            }
         }
     }
 
     if(isset($_POST['RemoveQuantity'])) { // Quitar 1 a la cantidad
         $val = $_POST['RemoveQuantity'];
-        if (($key = array_search($val, array_column($_SESSION['cart'], 0))) !== false) { // Busca por la key del valor
-            if ($_SESSION['cart'][$key][1] != 1) {
-                $_SESSION['cart'][$key][1]--;
-            }
-            else {
+        foreach($_SESSION['cart'] as $key => $value) { // Busca por la key del valor
+            if (in_array($val, $value)) {
+                if ($_SESSION['cart'][$key][1] != 1){
+                    $_SESSION['cart'][$key][1]--;
+                }
+                else {
                 unset($_SESSION['cart'][$key]);
+                }
             }
         }
     }
@@ -57,7 +63,7 @@
         $query = "SELECT * from libros WHERE id='$valor[0]'";
         $result = mysqli_fetch_array(mysqli_query($db,$query));
         echo "<p> Nombre:".$result['nombre']."Editorial:".$result['nombre']." Autor:".$result['autor']."ISBN:".$result['isbn']." Precio:".$result['precio']." Cantidad: ".$cantidad."</p>";
-        echo '<form action="#" method="post">';
+        echo '<form action="" method="post">';
         echo '<button name="RemoveQuantity" type="submit" value='.$result['id'].'>-</button>';
         echo '<button name="AddQuantity" type="submit" value='.$result['id'].'>+</button>';
         echo '<button name="Remove" type="submit" value='.$result['id'].'>Remove</button>';
@@ -68,7 +74,7 @@
     }
 
     echo "<br>Precio total: $precio_total".'<br>';
-    echo '<form action="#" method="post">';
+    echo '<form action="" method="post">';
     echo '<button name="Add" type="submit" value="10">Add 10</button>';
     echo '<button name="Add" type="submit" value="8">Add 8</button>';
     echo '<button name="Add" type="submit" value="9">Add 9</button>';
