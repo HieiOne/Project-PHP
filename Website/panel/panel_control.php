@@ -110,7 +110,7 @@
                     </div>
                 </a>
 
-                <a href="#"> <!-- Libros -->
+                <a href="libros/libros.php"> <!-- Libros -->
                     <div class="panel-top-bar-buttons">
                         <img class="images-position" src="../img/control_panel/books.png" alt="Books">
                         <p class="text-position">Books</p>
