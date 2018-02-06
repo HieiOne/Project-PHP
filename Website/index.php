@@ -98,5 +98,53 @@
 
         <!-- End of Menu bar -->
 
+        <!-- Start of Books -->
+            <p class="books-titles">Bestsellers</p>
+            <div class="book-rows">
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+            </div>
+            <p class="books-titles">Algo</p>
+            <div class="book-rows">
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+            </div>
+            <p class="books-titles">Tops of topics</p>
+            <div class="book-rows">
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+                <div class="book">
+                </div>
+            </div>
+        <!-- End of Books -->
+
     </body>
 </html>
