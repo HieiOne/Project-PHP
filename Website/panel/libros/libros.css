@@ -1,0 +1,243 @@
+/* Background right and left */
+
+.background-right {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    width: 15%;
+    height: 100%;
+    background-image: url("../../img/background/library-right.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-left {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 15%;
+    height: 100%;
+    background-image: url("../../img/background/library-left.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Top Bar */
+/* Logo */ 
+.top-bar {
+    width: 100%;
+    height: 65px;
+    max-height: 65px;
+    background-color: #53301A;
+    color: #ccb179;
+    font-weight: bold;
+    text-align: center;
+}
+
+.top-bar-logo {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+.top-bar-logo-position { /* Position and size */
+    line-height: 65px;
+    margin-left: 2%;
+    display: block;
+    float: left;
+    width: 20%;
+    min-width: 65px;
+    height: 100%;
+}
+
+.top-bar-logo-text {
+    text-align: center;
+    text-decoration: none;
+    color: #ccb179;
+}
+
+.top-bar-logo:hover {
+    background-color: #522507;
+}
+
+/* End of Logo */
+
+/* Search Bar */
+
+.top-bar-search {
+    float: left;
+    width: 55%;
+    height: 65px;
+    line-height: 65px;
+}
+
+input[type=text] { /* Format of search bar */
+    width: 50%;
+    height: 40px;
+    box-sizing: border-box;
+    border: 3px solid #ccb179;
+    font-size: 16px;
+    background-color: #53301A;
+    background-image: url("../../img/Lupa3.jpg");
+    background-repeat: no-repeat;
+    background-position: 10px 5px;
+    padding: 1% 3% 1% 40px;
+}
+
+::placeholder { /* Text inside Search bar */
+    font-weight: bold;
+    color: #ccb179;
+}
+
+/* End of Search Bar */
+
+/* Buttons of Login and Cart */
+.top-bar-buttons {
+    float: left;
+    width: 20%;
+    height: 65px;
+    line-height: 65px;
+    vertical-align: middle;
+}
+
+.top-bar-buttons-login {
+    width: 40px;
+    height: 40px;
+    line-height: 65px;
+    vertical-align: middle;
+}
+
+    .login-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .login-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ccb179;
+        width: 110px;
+        height: 40px;
+        z-index: 1;
+        opacity: 0.9;
+        top: 55px;
+    }
+
+    .login-drop-content-links { /*Links inside dropdown */
+        display: block;
+        color: #53301A;
+        font-weight: bold;
+        line-height: 18px;
+        border: 1px solid black;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .login-dropdown:hover .login-dropdown-content {
+        display: block;
+    }
+
+    .login-drop-content-links:hover {
+        background-color: #b59d66;        
+    }
+
+.top-bar-buttons-cart {
+    margin-left: 10%;
+    width: 40px;
+    height: 40px;
+    line-height: 65px;
+    vertical-align: middle;
+}
+
+/* End of buttons */
+/* End of Top Bar */
+
+/* Start of Books */
+
+.tabla {
+    margin-top: 2%;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+th {
+    background-color: #53301A;
+    color: #ccb179;
+    font-weight: bold;
+    text-align: center;
+}
+
+tr {
+    background-color: #ccb179;
+    color: #53301A;
+    font-weight: bold;
+    text-align: center; 
+}
+
+tr:hover {
+    background-color: #efe4b0;
+    cursor: default;
+}
+
+.AgregarDiv {
+    text-align: center;
+}
+
+.AgregarLibros {
+    margin-top: 2%;
+    width: 35%;
+    height: 50px;
+    background-color: #53301A;
+    color: #efe4b0;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.AgregarLibros:hover {
+    background-color: #b59d66;
+    color: #53301A;
+
+}
+
+.images {
+    width: 25px;
+    height: 25px;
+}
+
+/* End of Books */
+
+/* Creating default margins */
+
+body{
+margin: 0%;
+margin-left: 15%;
+margin-right: 15%;
+background-color: #efe4b0;
+font-size: 18px;
+height: 100%;
+}
+
+html {
+height: 100%;
+margin: 0%;
+}
+
+.welcome-message {
+position: absolute;
+margin: auto;
+width: 120px;
+top: 0;
+bottom: 10;
+left: 50;
+right: 0;
+margin-right: 29%;
+line-height: 25px;
+margin-top: 0.5%;
+vertical-align: middle;
+text-align: center;
+}

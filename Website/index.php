@@ -99,7 +99,7 @@
         <!-- End of Menu bar -->
 
         <!-- Start of Books -->
-            <p class="books-titles">Bestsellers</p>
+            <p class="books-titles">Highlights</p>
             <div class="book-rows">
                 <div class="book">
                 </div>
@@ -114,7 +114,7 @@
                 <div class="book">
                 </div>
             </div>
-            <p class="books-titles">Algo</p>
+            <p class="books-titles">Bestsellers</p>
             <div class="book-rows">
                 <div class="book">
                 </div>
@@ -145,6 +145,6 @@
                 </div>
             </div>
         <!-- End of Books -->
-
+    <div class="space"></div>
     </body>
 </html>
