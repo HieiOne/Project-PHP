@@ -11,7 +11,7 @@
     $usuario = $_POST['usuario'];
     $password = $_POST['passwd'];
 
-    $consulta = "SELECT id,password,usuario FROM clientes WHERE usuario = '$usuario'";
+    $consulta = "SELECT id,password,usuario,permisos FROM clientes WHERE usuario = '$usuario'";
     $result = mysqli_query($db,$consulta);
     $linea = mysqli_fetch_array($result);
     
@@ -19,6 +19,7 @@
         session_start();
         $_SESSION['id'] = $linea['id'];
         $_SESSION['usuario'] = $linea['usuario'];
+        $_SESSION['permisos'] = $linea['permisos'];
         header("Location: ../index.php");
     }
     else {

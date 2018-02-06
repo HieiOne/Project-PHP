@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+
+<?php
+    session_start();
+    if ($_SESSION['id'] == NULL) {
+        header("Location: ../login/login.php");
+    }
+?>
+
+
 <html>
     <link rel="stylesheet" href="panel_control.css">
     <head>
@@ -28,7 +37,6 @@
             </div>
 
             <?php //Welcome Message
-                session_start();
                 if ($_SESSION['id'] != NULL) {
                     echo '<span class="welcome-message"> Bienvenido '.$_SESSION['usuario'].'</span>';
                 }
@@ -86,6 +94,12 @@
 
         <!-- End of Control Panel Cart -->
 
+        <?php
+            //Si es admin muestra
+            if ($_SESSION['permisos'] != 'admin') {
+                exit;
+            }
+        ?>
         <!-- Start of ADMIN panel -->
         <div class="admin-bar">
             <div class="panel-top-bar">
