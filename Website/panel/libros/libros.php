@@ -78,8 +78,25 @@
                 exit;
             }
             
-            $query = "SELECT id,nombre,editorial,autor,isbn,precio,oferta,categorias,imagen FROM libros";
+            //$query = "SELECT id,nombre,editorial,autor,isbn,precio,oferta,categorias,imagen FROM libros";
+            $query = "SELECT * FROM libros";
             $result = mysqli_query($db,$query);
+
+            $row_cnt = mysqli_num_rows($result);
+            $results_page = 10;
+            $number_of_pages = ceil($row_cnt/$results_page);
+
+            // Pagina actual
+            if (!isset($_GET['page'])) {
+                $page = 1;
+            } 
+            else {
+                $page = $_GET['page'];
+            }
+
+            $first_result = ($page-1)*$results_page;
+            $query_limit = "SELECT id,nombre,editorial,autor,isbn,precio,oferta,categorias,imagen FROM libros LIMIT "."$first_result,"."$results_page";
+            $res = mysqli_query($db,$query_limit);
         ?>
 
         <div class="tabla">
@@ -93,12 +110,11 @@
                         <th>CATEGORIAS</th>
                         <th>PRECIO</th>
                         <th>OFERTA</th>
-                        <th>IMAGEN</th>
                         <th></th>
                         <th></th>
                     </tr>
                     <?php
-                        while ($array = mysqli_fetch_array($result)) {
+                        while ($array = mysqli_fetch_array($res)) {
                             echo '<tr><td>'.$array["nombre"].'</td>';
                             echo '<td>'.$array["editorial"].'</td>';
                             echo '<td>'.$array["autor"].'</td>';
@@ -106,7 +122,6 @@
                             echo '<td>'.$array["categorias"].'</td>';
                             echo '<td>'.$array["precio"].'</td>';
                             echo '<td>'.$array["oferta"].'</td>';
-                            echo '<td>'.$array["imagen"].'</td>';
                             echo '<td><a href=borrar_libros.php?id='.$array["id"].'><img class="images" src="../../img/remove.png" alt="remove_img"></td>';
                             echo '<td><a href=actualizar_libros.php?id='.$array["id"].'><img class="images" src="../../img/edit.png" alt="edit_img"></td></tr>';
                         }
@@ -114,8 +129,16 @@
                     ?>
                 </table>
             </form>
+            <br>
         </div>
 
+        <div class="pages">
+            <?php
+                for ($page=1;$page<=$number_of_pages;$page++) { 
+                    echo '<a class="pagesbuttons" href="libros.php?page='.$page.'">'.$page.'</a>  ';
+                }
+            ?>
+        </div>
         <!-- End of Books -->
 
     </body>

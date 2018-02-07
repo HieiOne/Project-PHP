@@ -156,6 +156,7 @@ input[type=text] { /* Format of search bar */
 
 .tabla {
     margin-top: 2%;
+    font-size: 12px;
 }
 
 table, th, td {
@@ -207,6 +208,24 @@ tr:hover {
 .images {
     width: 25px;
     height: 25px;
+}
+
+.pages {
+    text-align: center;
+}
+
+.pagesbuttons {
+    color: #53301A;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #ccb179;
+    border: 2px solid #ccb179;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.pagesbuttons:hover {
+    background-color: #efe4b0;
 }
 
 /* End of Books */

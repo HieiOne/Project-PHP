@@ -84,26 +84,26 @@
             <p class="AnadiendoLibro">Actualizando libro</p>
             <form action="#" method="post">
             <?php
-                echo '<label for=nombre>Nombre: ';
-                echo '<input type="info" name="nombre" value='.$array["nombre"].'><br>';
+                echo '<label for=nombre>Nombre:';
+                echo '<input type="info" name="nombre" value="'.$array["nombre"].'"><br>';
                 echo '</label>';
                 echo '<label for=editorial>Editorial: ';
-                echo '<input type="info" name="editorial" value='.$array["editorial"].'><br>';
+                echo '<input type="info" name="editorial" value="'.$array["editorial"].'"><br>';
                 echo '</label>';
                 echo '<label for=autor>Autor: ';
-                echo '<input type="info" name="autor" value='.$array["autor"].'><br>';
+                echo '<input type="info" name="autor" value="'.$array["autor"].'"><br>';
                 echo '</label>';
                 echo '<label for=isbn>ISBN: ';
-                echo '<input type="info" name="isbn" minlength="10" maxlength="13" pattern="[0-9]+" title="Solo numeros" value='.$array["isbn"].'><br>';
+                echo '<input type="info" name="isbn" minlength="10" maxlength="13" pattern="[0-9]+" title="Solo numeros" value="'.$array["isbn"].'"><br>';
                 echo '</label>';
                 echo '<label for=precio>Precio: ';
-                echo '<input type="info" name="precio" pattern="[0-9]+" title="Solo numeros E.G: 15" value='.$array["precio"].'><br>';
+                echo '<input type="info" name="precio" pattern="[0-9]+" title="Solo numeros E.G: 15" value="'.$array["precio"].'"><br>';
                 echo '</label>';
                 echo '<label for=imagen>Imagen: ';
-                echo '<input type="info" name="imagen" value='.$array["imagen"].'><br>';
+                echo '<input type="info" name="imagen" value="'.$array["imagen"].'"><br>';
                 echo '</label>';
                 echo '<label for=oferta>Oferta: ';
-                echo '<input type="info" name="oferta" pattern="[0-9]+" title="Solo numeros E.G: 15" value='.$array["oferta"].'><br>';
+                echo '<input type="info" name="oferta" pattern="[0-9]+" title="Solo numeros E.G: 15" value="'.$array["oferta"].'"><br>';
                 echo '</label>';
 
                 $categories = array("youth","psycologhy","black","horror","history","medical","children","contemporary","romance","comics","economics","historical");
