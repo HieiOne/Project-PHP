@@ -106,7 +106,7 @@
                 echo '<input type="info" name="oferta" pattern="[0-9]+" title="Solo numeros E.G: 15" value='.$array["oferta"].'><br>';
                 echo '</label>';
 
-                $categories = array("youth","psycologhy","black","self-help","history","medical","children","contemporary","romance","comics","economics","historical");
+                $categories = array("youth","psycologhy","black","horror","history","medical","children","contemporary","romance","comics","economics","historical");
                 $op_default = $array['categorias'];
                 echo '<label for=categorias>Categoria: ';
                     echo '<select name="categorias">';

@@ -85,7 +85,7 @@
                     <option value="youth">Youth</option>
                     <option value="psycologhy">Psycologhy</option>
                     <option value="black">Black</option>
-                    <option value="self-help">Self-Help</option>
+                    <option value="horror">Horror</option>
                     <option value="history">History</option>
                     <option value="medical">Medical</option>
                     <option value="children">Children</option>
