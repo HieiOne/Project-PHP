@@ -75,7 +75,7 @@
 
             $id = $_GET['id'];
 
-            $query = "SELECT nombre,editorial,autor,isbn,imagen,precio,oferta FROM libros WHERE id='$id'"; //Change the id to get it dynamically
+            $query = "SELECT nombre,editorial,autor,isbn,categorias,imagen,precio,oferta FROM libros WHERE id='$id'"; //Change the id to get it dynamically
             $result = mysqli_query($db,$query);
             $array = mysqli_fetch_array($result);
         ?>
@@ -105,23 +105,23 @@
                 echo '<label for=oferta>Oferta: ';
                 echo '<input type="info" name="oferta" pattern="[0-9]+" title="Solo numeros E.G: 15" value='.$array["oferta"].'><br>';
                 echo '</label>';
+
+                $categories = array("youth","psycologhy","black","self-help","history","medical","children","contemporary","romance","comics","economics","historical");
+                $op_default = $array['categorias'];
+                echo '<label for=categorias>Categoria: ';
+                    echo '<select name="categorias">';
+                        foreach ($categories as $category) {
+                            if($category == $op_default) {
+                                echo '<option selected value="'.$category.'">'.$category.'</option>';
+                            }
+                            else {
+                                echo '<option value="'.$category.'">'.$category.'</option>';
+                            }
+                        }
+                    echo '</select>';
+                echo '</label>';
+                echo "<br>";
             ?>
-                <label for="categorias">Categoria:
-                    <select name="categorias">
-                        <option value="youth">Youth</option>
-                        <option value="psycologhy">Psycologhy</option>
-                        <option value="black">Black</option>
-                        <option value="self-help">Self-Help</option>
-                        <option value="history">History</option>
-                        <option value="medical">Medical</option>
-                        <option value="children">Children</option>
-                        <option value="contemporary">Contemporary</option>
-                        <option value="romance">Romance</option>
-                        <option value="comics">Comics</option>
-                        <option value="economics">Economics</option>
-                        <option value="historical">Historical</option>
-                    </select>
-                </label><br>
                 <input class="ButtonInsert" type="submit" name="Insertar" value="Actualizar">
             </form>
             <button class="ButtonInsert" onclick=location.href="libros.php">Regresar</button>
