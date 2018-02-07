@@ -81,7 +81,22 @@
                 <input type="info" name="editorial" required placeholder="Editorial.."><br>
                 <input type="info" name="autor" required placeholder="Autor.."><br>
                 <input type="info" name="isbn" required minlength="10" maxlength="13" pattern="[0-9]+" title="Solo numeros" placeholder="ISBN.."><br>
+                <select name="categorias">
+                    <option value="youth">Youth</option>
+                    <option value="psycologhy">Psycologhy</option>
+                    <option value="black">Black</option>
+                    <option value="self-help">Self-Help</option>
+                    <option value="history">History</option>
+                    <option value="medical">Medical</option>
+                    <option value="children">Children</option>
+                    <option value="contemporary">Contemporary</option>
+                    <option value="romance">Romance</option>
+                    <option value="comics">Comics</option>
+                    <option value="economics">Economics</option>
+                    <option value="historical">Historical</option>
+                </select><br>
                 <input type="info" name="precio" required pattern="[0-9]+" title="Solo numeros E.G: 15" placeholder="Precio.."><br>
+                <input type="info" name="oferta" required pattern="[0-9]+" title="Solo numeros E.G: 15" placeholder="Oferta.."><br>
                 <input type="info" name="imagen" required placeholder="Ruta Imagen.."><br>
                 <input class="ButtonInsert" type="submit" name="Insertar" value="Insertar">
             </form>
@@ -94,11 +109,13 @@
             $editorial = $_POST['editorial'];
             $autor = $_POST['autor'];
             $isbn = $_POST['isbn'];
+            $categorias = $_POST['categorias'];
             $precio = $_POST['precio'];
+            $oferta = $_POST['oferta'];
             $imagen = $_POST['imagen'];
         
             //Generating the query
-            $query = "INSERT INTO libros (nombre,editorial,autor,isbn,precio,imagen) VALUES ('$nombre','$editorial','$autor','$isbn','$precio','$imagen')";
+            $query = "INSERT INTO libros (nombre,editorial,autor,isbn,categorias,precio,oferta,imagen) VALUES ('$nombre','$editorial','$autor','$isbn','$categorias','$precio','$oferta','$imagen')";
             mysqli_query($db,$query);
 
             if (isset($_POST['Insertar'])) {

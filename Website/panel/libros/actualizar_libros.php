@@ -84,14 +84,44 @@
             <p class="AnadiendoLibro">Actualizando libro</p>
             <form action="#" method="post">
             <?php
+                echo '<label for=nombre>Nombre: ';
                 echo '<input type="info" name="nombre" value='.$array["nombre"].'><br>';
+                echo '</label>';
+                echo '<label for=editorial>Editorial: ';
                 echo '<input type="info" name="editorial" value='.$array["editorial"].'><br>';
+                echo '</label>';
+                echo '<label for=autor>Autor: ';
                 echo '<input type="info" name="autor" value='.$array["autor"].'><br>';
+                echo '</label>';
+                echo '<label for=isbn>ISBN: ';
                 echo '<input type="info" name="isbn" minlength="10" maxlength="13" pattern="[0-9]+" title="Solo numeros" value='.$array["isbn"].'><br>';
+                echo '</label>';
+                echo '<label for=precio>Precio: ';
                 echo '<input type="info" name="precio" pattern="[0-9]+" title="Solo numeros E.G: 15" value='.$array["precio"].'><br>';
+                echo '</label>';
+                echo '<label for=imagen>Imagen: ';
                 echo '<input type="info" name="imagen" value='.$array["imagen"].'><br>';
+                echo '</label>';
+                echo '<label for=oferta>Oferta: ';
                 echo '<input type="info" name="oferta" pattern="[0-9]+" title="Solo numeros E.G: 15" value='.$array["oferta"].'><br>';
+                echo '</label>';
             ?>
+                <label for="categorias">Categoria:
+                    <select name="categorias">
+                        <option value="youth">Youth</option>
+                        <option value="psycologhy">Psycologhy</option>
+                        <option value="black">Black</option>
+                        <option value="self-help">Self-Help</option>
+                        <option value="history">History</option>
+                        <option value="medical">Medical</option>
+                        <option value="children">Children</option>
+                        <option value="contemporary">Contemporary</option>
+                        <option value="romance">Romance</option>
+                        <option value="comics">Comics</option>
+                        <option value="economics">Economics</option>
+                        <option value="historical">Historical</option>
+                    </select>
+                </label><br>
                 <input class="ButtonInsert" type="submit" name="Insertar" value="Actualizar">
             </form>
             <button class="ButtonInsert" onclick=location.href="libros.php">Regresar</button>
@@ -103,12 +133,13 @@
             $editorial = $_POST['editorial'];
             $autor = $_POST['autor'];
             $isbn = $_POST['isbn'];
+            $categorias = $_POST['categorias'];
             $precio = $_POST['precio'];
             $imagen = $_POST['imagen'];
             $oferta = $_POST['oferta'];
             
             //Update query
-            $query_update = "UPDATE libros SET nombre='$nombre',editorial='$editorial',autor='$autor',isbn='$isbn',precio='$precio',imagen='$imagen',oferta='$oferta' WHERE id='$id'";
+            $query_update = "UPDATE libros SET nombre='$nombre',editorial='$editorial',autor='$autor',isbn='$isbn',categorias='$categorias',precio='$precio',imagen='$imagen',oferta='$oferta' WHERE id='$id'";
             mysqli_query($db,$query_update);
             mysqli_close($db);
 

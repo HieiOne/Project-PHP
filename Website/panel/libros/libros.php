@@ -78,7 +78,7 @@
                 exit;
             }
             
-            $query = "SELECT id,nombre,editorial,autor,isbn,precio,oferta,imagen FROM libros";
+            $query = "SELECT id,nombre,editorial,autor,isbn,precio,oferta,categorias,imagen FROM libros";
             $result = mysqli_query($db,$query);
         ?>
 
@@ -90,6 +90,7 @@
                         <th>EDITORIAL</th>
                         <th>AUTOR</th>
                         <th>ISBN</th>
+                        <th>CATEGORIAS</th>
                         <th>PRECIO</th>
                         <th>OFERTA</th>
                         <th>IMAGEN</th>
@@ -102,6 +103,7 @@
                             echo '<td>'.$array["editorial"].'</td>';
                             echo '<td>'.$array["autor"].'</td>';
                             echo '<td>'.$array["isbn"].'</td>';
+                            echo '<td>'.$array["categorias"].'</td>';
                             echo '<td>'.$array["precio"].'</td>';
                             echo '<td>'.$array["oferta"].'</td>';
                             echo '<td>'.$array["imagen"].'</td>';
