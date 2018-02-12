@@ -162,6 +162,18 @@ input[type=text] { /* Format of search bar */
     margin-right: auto;
 }
 
+.panel-top-bar-buttons-ps {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: #ccb179;
+    margin-left: 6%;
+    border: 2px solid #53301A;
+    border-radius: 25px;
+    text-align: center;
+
+}
+
 .panel-top-bar-buttons {
     width: 25%;
     height: 100%;
@@ -172,7 +184,7 @@ input[type=text] { /* Format of search bar */
     border-radius: 25px;
 }
 
-.panel-top-bar-buttons:hover {
+.panel-top-bar-buttons-ps:hover, .panel-top-bar-buttons:hover {
     background-color: #b59d66;
 }
 
@@ -182,6 +194,24 @@ input[type=text] { /* Format of search bar */
     margin-top: 2%;
     width: 70px;
     height: 70px;
+}
+
+.images-position-ps {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    width: 70px;
+    height: 70px;
+    margin-left: 2%;
+}
+
+.text-position-ps {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: #53301A;
+    font-weight: bold;
+    text-align: center;
 }
 
 .text-position {

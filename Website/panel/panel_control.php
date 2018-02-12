@@ -63,17 +63,11 @@
 
         <!-- Start of Control Panel -->
             <div class="panel-top-bar">
-                <a href="#"> <!-- Profile -->
-                    <div class="panel-top-bar-buttons">
-                        <img class="images-position" src="../img/control_panel/profile.png" alt="Profile">
-                        <p class="text-position">Profile</p>
-                    </div>
-                </a>
-
-                <a href="#"> <!-- Security -->
-                    <div class="panel-top-bar-buttons">
-                        <img class="images-position" src="../img/control_panel/security.png" alt="Security">
-                        <p class="text-position">Security</p>
+                <a href="#"> <!-- Profile and Security -->
+                    <div class="panel-top-bar-buttons-ps">
+                        <img class="images-position-ps" src="../img/control_panel/profile.png" alt="Profile">
+                        <img class="images-position-ps" src="../img/control_panel/security.png" alt="Security">
+                        <p class="text-position-ps">Profile and Security</p>
                     </div>
                 </a>
 
