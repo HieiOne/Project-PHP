@@ -67,13 +67,43 @@
                 <div class="correo">
                     <input type="email" name="email" placeholder="Email...*" required><br>
                 </div>
+                <span>Máximo 380 carácteres</span>
                 <div class="mensaje">
-                    <textarea name="problema" placeholder="Problema...*" required></textarea>
+                    <textarea id="textareaChars" name="problema" maxlenght="380" placeholder="Problema...*" required></textarea>
                 </div>
+                <input class="ButtonInsert" type="submit" name="Insertar" value="Insertar">
             </form>
         </div>
 
         <!-- End of Support -->
+
+        <!-- Generating ticket -->
+        <?php
+            $email = $_POST['email'];
+            $problema = $_POST['problema'];
+
+            $db = mysqli_connect("127.0.0.1", "root", "toor", "proyectophp");
+
+            if (!$db) {
+                echo "Error: Unable to connect to MySQL." . PHP_EOL;
+                echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+                echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+                exit;
+            }
+
+            if (isset($_POST['Insertar'])) {
+                $numero_caracteres = strlen($problema);
+                if ($numero_caracteres <= 255) {
+                    $query = "INSERT INTO problemas (email,problema) VALUES ('$email','$problema')";
+                    mysqli_query($db,$query);
+                    echo "<p class='TicketEnviado'> Su ticket ha sido generado, te informaremos pronto mediante correo</p>";
+                }
+                else {
+                    echo "<p class='TicketError'> Error en el ticket, has superado la cantidad de caracteres máximos: 380</p>";
+                }
+            }
+
+        ?>
 
     </body>
 </html>
