@@ -179,7 +179,7 @@
 		.drop-content {
 			display: none;
 			position: absolute;
-			top: 115px; /* So it will be right under the menu */
+			top: 105px; /* So it will be right under the menu */
 			background-color: #ccb179;
 			min-width: 60%;
 			z-index: 1; /* To show itself over other items */

@@ -103,7 +103,7 @@
         <!-- Start of ADMIN panel -->
         <div class="admin-bar">
             <div class="panel-top-bar">
-                <a href="#"> <!-- Users -->
+                <a href="usuarios/usuarios.php"> <!-- Users -->
                     <div class="panel-top-bar-buttons">
                         <img class="images-position" src="../img/control_panel/users.png" alt="Users">
                         <p class="text-position">Users</p>
