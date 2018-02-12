@@ -77,7 +77,7 @@
                     </div>
                 </a>
 
-                <a href="#"> <!-- Support -->
+                <a href="support/support.php"> <!-- Support -->
                     <div class="panel-top-bar-buttons">
                         <img class="images-position" src="../img/control_panel/support.png" alt="Support">
                         <p class="text-position">Support</p>
