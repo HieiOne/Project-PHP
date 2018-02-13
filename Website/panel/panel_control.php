@@ -63,7 +63,7 @@
 
         <!-- Start of Control Panel -->
             <div class="panel-top-bar">
-                <a href="#"> <!-- Profile and Security -->
+                <a href="profile/profile.php"> <!-- Profile and Security -->
                     <div class="panel-top-bar-buttons-ps">
                         <img class="images-position-ps" src="../img/control_panel/profile.png" alt="Profile">
                         <img class="images-position-ps" src="../img/control_panel/security.png" alt="Security">
