@@ -136,6 +136,7 @@
             $direccion = $_POST['direccion'];
             $pais = $_POST['pais'];
             $cp = $_POST['cp'];
+
             $provincia = $_POST['provincia'];
 
             if ($_POST['password'] != NULL && $_POST['password'] == $_POST['rep_password']) {
@@ -147,7 +148,12 @@
             }
 
             if (isset($_POST['Insertar'])) {
-                $query_update = "UPDATE clientes SET usuario='$usuario',email='$email',password='$password',direccion='$direccion',pais='$pais',cp='$cp',provincia='$provincia' WHERE id='$id'";
+                if($_POST['cp'] != NULL) {
+                    $query_update = "UPDATE clientes SET usuario='$usuario',email='$email',password='$password',direccion='$direccion',pais='$pais',cp=$cp,provincia='$provincia' WHERE id='$id'";
+                }
+                else {
+                    $query_update = "UPDATE clientes SET usuario='$usuario',email='$email',password='$password',direccion='$direccion',pais='$pais',cp=NULL,provincia='$provincia' WHERE id='$id'";
+                }
                 mysqli_query($db,$query_update);
                 header("refresh: 0.1;url=profile.php");
             }
