@@ -99,7 +99,8 @@
         <!-- End of Menu bar -->
 
         <!-- Start of Books -->
-            <p class="books-titles">Highlights</p>
+        <br>
+        <span class="books-titles">Highlights</span>
             <div class="book-rows">
                 <div class="book">
                 </div>
@@ -114,7 +115,9 @@
                 <div class="book">
                 </div>
             </div>
-            <p class="books-titles">Bestsellers</p>
+
+            <br>
+            <span class="books-titles">Bestsellers</span>
             <div class="book-rows">
                 <div class="book">
                 </div>
@@ -129,7 +132,9 @@
                 <div class="book">
                 </div>
             </div>
-            <p class="books-titles">Tops of topics</p>
+
+            <br>
+            <span class="books-titles">Tops of topics</span>
             <div class="book-rows">
                 <div class="book">
                 </div>
@@ -144,7 +149,9 @@
                 <div class="book">
                 </div>
             </div>
+
         <!-- End of Books -->
+
     <div class="space"></div>
     </body>
 </html>
