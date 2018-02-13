@@ -79,7 +79,7 @@
                 exit;
             }
             
-            //$query = "SELECT id,nombre,editorial,autor,isbn,precio,oferta,categorias,imagen FROM libros";
+            //$query = "SELECT id,nombre,editorial,autor,isbn,precio,oferta,categ FROM libros";
             $query = "SELECT * FROM libros";
             $result = mysqli_query($db,$query);
 
@@ -96,7 +96,7 @@
             }
 
             $first_result = ($page-1)*$results_page;
-            $query_limit = "SELECT id,nombre,editorial,autor,isbn,precio,oferta,categorias,imagen FROM libros LIMIT "."$first_result,"."$results_page";
+            $query_limit = "SELECT id,nombre,editorial,autor,isbn,precio,oferta,categorias FROM libros LIMIT "."$first_result,"."$results_page";
             $res = mysqli_query($db,$query_limit);
         ?>
 

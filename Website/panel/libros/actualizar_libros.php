@@ -75,7 +75,7 @@
 
             $id = $_GET['id'];
 
-            $query = "SELECT nombre,editorial,autor,isbn,categorias,imagen,precio,oferta FROM libros WHERE id='$id'"; //Change the id to get it dynamically
+            $query = "SELECT nombre,editorial,autor,isbn,categorias,precio,oferta FROM libros WHERE id='$id'"; //Change the id to get it dynamically
             $result = mysqli_query($db,$query);
             $array = mysqli_fetch_array($result);
         ?>
@@ -99,9 +99,6 @@
                 echo '</label>';
                 echo '<label for=precio>Precio: ';
                 echo '<input type="info" name="precio" pattern="[0-9]+" title="Solo numeros E.G: 15" value="'.$array["precio"].'"><br>';
-                echo '</label>';
-                echo '<label for=imagen>Imagen: ';
-                echo '<input type="info" name="imagen" value="'.$array["imagen"].'"><br>';
                 echo '</label>';
                 echo '<label for=oferta>Oferta: ';
                 echo '<input type="info" name="oferta" pattern="[0-9]+" title="Solo numeros E.G: 15" value="'.$array["oferta"].'"><br>';
@@ -137,11 +134,10 @@
             $isbn = $_POST['isbn'];
             $categorias = $_POST['categorias'];
             $precio = $_POST['precio'];
-            $imagen = $_POST['imagen'];
             $oferta = $_POST['oferta'];
             
             //Update query
-            $query_update = "UPDATE libros SET nombre='$nombre',editorial='$editorial',autor='$autor',isbn='$isbn',categorias='$categorias',precio='$precio',imagen='$imagen',oferta='$oferta' WHERE id='$id'";
+            $query_update = "UPDATE libros SET nombre='$nombre',editorial='$editorial',autor='$autor',isbn='$isbn',categorias='$categorias',precio='$precio',oferta='$oferta' WHERE id='$id'";
             mysqli_query($db,$query_update);
             mysqli_close($db);
 

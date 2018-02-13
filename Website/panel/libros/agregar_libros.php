@@ -97,7 +97,6 @@
                 </select><br>
                 <input type="info" name="precio" required pattern="[0-9]+" title="Solo numeros E.G: 15" placeholder="Precio.."><br>
                 <input type="info" name="oferta" required pattern="[0-9]+" title="Solo numeros E.G: 15" placeholder="Oferta.."><br>
-                <input type="info" name="imagen" required placeholder="Ruta Imagen.."><br>
                 <input class="ButtonInsert" type="submit" name="Insertar" value="Insertar">
             </form>
             <button class="ButtonInsert" onclick=location.href="libros.php">Regresar</button>
@@ -112,10 +111,9 @@
             $categorias = $_POST['categorias'];
             $precio = $_POST['precio'];
             $oferta = $_POST['oferta'];
-            $imagen = $_POST['imagen'];
         
             //Generating the query
-            $query = "INSERT INTO libros (nombre,editorial,autor,isbn,categorias,precio,oferta,imagen) VALUES ('$nombre','$editorial','$autor','$isbn','$categorias','$precio','$oferta','$imagen')";
+            $query = "INSERT INTO libros (nombre,editorial,autor,isbn,categorias,precio,oferta) VALUES ('$nombre','$editorial','$autor','$isbn','$categorias','$precio','$oferta')";
             mysqli_query($db,$query);
 
             if (isset($_POST['Insertar'])) {
