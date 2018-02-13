@@ -73,6 +73,7 @@
                 </div>
                 <input class="ButtonInsert" type="submit" name="Insertar" value="Insertar">
             </form>
+            <button class="ButtonInsert" onclick=location.href="../panel_control.php">Regresar</button>
         </div>
 
         <!-- End of Support -->

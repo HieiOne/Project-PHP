@@ -11,3 +11,4 @@ DONE 4.- PROFILE -> RESTO INFORMACION USUARIO || SECURITY -> PASSWORD
 DONE 11.- Evitar el cambio de color al completar un campo //Aplicar a todos los forms
 DONE 12.- Evitar error en el texto de highlights, bestsellers y tops of topics en bajas resoluciones.
 DONE 13.- Evitar error del texto del logo en bajas resoluciones
+DONE 14.- Agregar botones de regresar en Profile, Support, Users y Books

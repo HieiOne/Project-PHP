@@ -122,12 +122,9 @@
             ?>
             </div>
         </div>
-
-        <div class="button">
-            <input class="ButtonInsert" type="submit" name="Insertar" value="Actualizar">
-        </div>
-
+        <input class="ButtonInsert" type="submit" name="Insertar" value="Actualizar">
         </form>
+        <button class="ButtonInsert" onclick=location.href="../panel_control.php">Regresar</button>
             
         <!-- End of Profile -->
 

@@ -203,8 +203,9 @@ textarea[name=problema] {
 .ButtonInsert {
     position: relative;
     float: left;
-    right: -30%;
+    right: -15%;
     margin-top: 6%;
+    margin-right: 1%;
     width: 35%;
     height: 50px;
     background-color: #b59d66;

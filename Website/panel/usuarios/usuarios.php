@@ -65,6 +65,7 @@
         
         <div class="AgregarDiv">
             <button class="AgregarUsuarios" onclick=location.href="agregar_usuarios.php">Agregar Usuarios</button>
+            <button class="AgregarUsuarios" onclick=location.href="../panel_control.php">Regresar</button>
         </div>
 
         <?php

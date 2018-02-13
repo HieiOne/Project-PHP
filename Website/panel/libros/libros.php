@@ -65,6 +65,7 @@
         
         <div class="AgregarDiv">
             <button class="AgregarLibros" onclick=location.href="agregar_libros.php">Agregar Libros</button>
+            <button class="AgregarLibros" onclick=location.href="../panel_control.php">Regresar</button>
         </div>
 
         <?php
