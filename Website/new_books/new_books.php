@@ -69,24 +69,28 @@
         <!-- Start of Showing new books -->
         <p class="newbooks-headtitle">New Books</p>
         <div class="new-books">
-
-            <!-- <div class="book"> EXAMPLE
-                <img class="images-books" src="../img/libros/origen.jpg">
-                <span class="names-books">LOS MITOS DE CTHULHU</span>
-                <span class="price-books">20€</span>
-                <button class="buy-books" name="add" type="submit" value="8">BUY</button>
-            </div> -->
-
             <?php
                 $query = "SELECT nombre,isbn,precio,oferta FROM libros ORDER BY add_date DESC LIMIT 0,11";
                 $result = mysqli_query($db,$query);
                 
                 while ($array = mysqli_fetch_array($result)) {
                     echo '<div class="book">';
-                        echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
-                        echo '<span class="names-books">'.$array[nombre].'</span>';
-                        echo '<span class="price-books">'.$array[precio].' €</span>';
-                        echo '<button class="buy-books" name="add" type="submit" value="'.$array[isbn].'">BUY</button>';
+                        if($array['oferta'] == 0) {
+                            echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
+                            echo '<span class="names-books">'.$array[nombre].'</span>';
+                            echo '<span class="price-books">'.$array[precio].' €</span>';
+                            echo '<button class="buy-books" name="add" type="submit" value="'.$array[isbn].'">BUY</button>';
+                        }
+                        else {
+                            $descuento = $array[oferta]*$array[precio]/100;
+                            $precio = $array[precio] - $descuento;
+                            echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
+                            echo '<span class="discount-books">-'.$array[oferta].'%</span>';
+                            echo '<span class="names-books">'.$array[nombre].'</span>';
+                            echo '<span class="price-books-discount-before">'.$array[precio].' €</span>';
+                            echo '<span class="price-books-discount">'.$precio.' €</span>';
+                            echo '<button class="buy-books" name="add" type="submit" value="'.$array[isbn].'">BUY</button>';
+                        }
                     echo '</div>';
                 }
                 

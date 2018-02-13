@@ -1,4 +1,4 @@
-Version: 0.5.0
+Version: 0.5.1
 
 DONE 1.- CENTRAR LOS FIELDS EN AGREGAR
 DONE 2.- COMPROBAR LOS CAMPOS AL AGREGAR UN USUARIO (CUANDO PULSE AGREGAR, COMPROBAR ERRORES Y SI HAY MOSTRARLOS, SI NO CONTINUAR)
@@ -10,7 +10,7 @@ DONE 4.- PROFILE -> RESTO INFORMACION USUARIO || SECURITY -> PASSWORD
 8.- 
 	8.1 - CATEGORIAS
 	8.2 - PROMOCIONES
-DONE	8.3 - NUEVOS LIBROS
+DONE	8.3 - NUEVOS LIBROS, IMPLEMENTED DISCOUNTS
 9.- CAMBIAR ICONO DE LOGIN
 DONE 11.- Evitar el cambio de color al completar un campo //Aplicar a todos los forms
 DONE 12.- Evitar error en el texto de highlights, bestsellers y tops of topics en bajas resoluciones.

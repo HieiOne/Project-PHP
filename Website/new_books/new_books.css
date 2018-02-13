@@ -173,6 +173,7 @@ input[type=text] { /* Format of search bar */
 }
 
 .book {
+    position: relative;
     width: 20.7%;
     height: 40%;
     margin: 1.2% 2%;
@@ -184,6 +185,18 @@ input[type=text] { /* Format of search bar */
     margin: 0 auto;
     width: 80%;
     height: 75%;
+}
+
+.discount-books {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 3px solid red;
+    font-weight: bold;
+    background-color: red;
+    border-color: black;
+    border-radius: 50%;
+    padding: 2%;
 }
 
 .names-books {
@@ -202,6 +215,26 @@ input[type=text] { /* Format of search bar */
 }
 
 .price-books {
+    display: block;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.price-books-discount-before {
+    display: block;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration-line: line-through;
+    opacity: 0.6;
+    float: right;
+    margin-left: 2%;
+}
+
+.price-books-discount {
     display: block;
     text-align: right;
     color: black;
