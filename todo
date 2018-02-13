@@ -1,4 +1,4 @@
-Version: 0.4.2
+Version: 0.4.3
 
 DONE 1.- CENTRAR LOS FIELDS EN AGREGAR
 DONE 2.- COMPROBAR LOS CAMPOS AL AGREGAR UN USUARIO (CUANDO PULSE AGREGAR, COMPROBAR ERRORES Y SI HAY MOSTRARLOS, SI NO CONTINUAR)
@@ -9,10 +9,9 @@ DONE 4.- PROFILE -> RESTO INFORMACION USUARIO || SECURITY -> PASSWORD
 7.- MOSTRAR LIBROS ; BESTSELLERS, TOPS OF TOPICS
 8.- CATEGORIAS, PROMOCIONES, NUEVOS LIBROS
 9.- CAMBIAR ICONO DE LOGIN
-10.- CAMBIAR COLORES DE LOGIN PARA QUE CONCUERDE CON EL FORM
 DONE 11.- Evitar el cambio de color al completar un campo //Aplicar a todos los forms
 DONE 12.- Evitar error en el texto de highlights, bestsellers y tops of topics en bajas resoluciones.
 DONE 13.- Evitar error del texto del logo en bajas resoluciones
 DONE 14.- Agregar botones de regresar en Profile, Support, Users y Books
-15.- Error al registrarse y login fallido
+DONE 15.- Error al registrarse y login fallido
 DONE 16.- Arreglar el perfil, que si le falta un puñetero campo no cambia

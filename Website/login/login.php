@@ -16,16 +16,16 @@
             exit;
         }
 
-        if($_SESSION['error_login'] == 1) {
+        if($_SESSION['error'] == 4) {
             echo '<p class="fallido">Inicio de sesion fallido</p>';
         }
-        if($_SESSION['error_register'] == 3) {
+        if($_SESSION['error'] == 3) {
             echo '<p class="success_register">Registro completo</p>';
         }
-        if($_SESSION['error_register'] == 1) {
+        if($_SESSION['error'] == 1) {
             echo '<p class="fallido_register">Las passwords deben ser iguales</p>';
         }
-        if($_SESSION['error_register'] == 2) {
+        if($_SESSION['error'] == 2) {
             echo '<p class="fallido">El usuario ya existe</p>';
         }
     ?>

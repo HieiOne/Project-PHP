@@ -20,16 +20,16 @@
     if ($password == $rep_password) { //Checks if passwords are the same
         if ($result['usuario'] == NULL) { //Checks if the username doesn't exist
             mysqli_query($db,$query_insert);
-            $_SESSION['error_register'] = 3;
+            $_SESSION['error'] = 3;
             header("Location: login.php");
         }
         else {
-            $_SESSION['error_register'] = 2;
+            $_SESSION['error'] = 2;
             header("Location: login.php");
         }
     }
     else {
-        $_SESSION['error_register'] = 1;
+        $_SESSION['error'] = 1;
         header("Location: login.php");
     }
     mysqli_close($db);

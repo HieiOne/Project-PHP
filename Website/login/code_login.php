@@ -24,7 +24,7 @@
     }
     else {
         session_start();
-        $_SESSION['error_login'] = 1;
+        $_SESSION['error'] = 4;
         header("Location: login.php");
     }
     mysqli_close($db);
