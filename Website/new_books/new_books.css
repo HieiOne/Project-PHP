@@ -176,7 +176,6 @@ input[type=text] { /* Format of search bar */
     width: 20.7%;
     height: 40%;
     margin: 1.2% 2%;
-    border: 1px solid black;
     float: left;
 }
 

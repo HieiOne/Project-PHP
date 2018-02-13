@@ -2,6 +2,15 @@
 
 <?php
     session_start();
+
+    $db = mysqli_connect("127.0.0.1", "root", "toor", "proyectophp");
+            
+    if (!$db) {
+        echo "Error: Unable to connect to MySQL." . PHP_EOL;
+        echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+        echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+        exit;
+    }
 ?>
 
 <html>
@@ -60,37 +69,29 @@
         <!-- Start of Showing new books -->
         <p class="newbooks-headtitle">New Books</p>
         <div class="new-books">
-            <div class="book">
+
+            <!-- <div class="book"> EXAMPLE
                 <img class="images-books" src="../img/libros/origen.jpg">
                 <span class="names-books">LOS MITOS DE CTHULHU</span>
                 <span class="price-books">20€</span>
                 <button class="buy-books" name="add" type="submit" value="8">BUY</button>
-            </div>
-            <div class="book">
-            </div>
-            <div class="book">
-            </div>
-            <div class="book">
-            </div>
-            <div class="book">
-            </div>
-            <div class="book">
-            </div>
-            <div class="book">
-            </div>
-            <div class="book">
-            </div>
-            <div class="book">
-            </div>
-            <div class="book">
-            </div>
-            <div class="book">
-            </div>
-            <div class="book">
-            </div>
-            <div class="book">
-            </div>
+            </div> -->
 
+            <?php
+                $query = "SELECT nombre,isbn,precio,oferta FROM libros ORDER BY add_date DESC LIMIT 0,11";
+                $result = mysqli_query($db,$query);
+                
+                while ($array = mysqli_fetch_array($result)) {
+                    echo '<div class="book">';
+                        echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
+                        echo '<span class="names-books">'.$array[nombre].'</span>';
+                        echo '<span class="price-books">'.$array[precio].' €</span>';
+                        echo '<button class="buy-books" name="add" type="submit" value="'.$array[isbn].'">BUY</button>';
+                    echo '</div>';
+                }
+                
+                mysqli_close($db);
+            ?>
         </div>
         <!-- End of showing new books -->
 
