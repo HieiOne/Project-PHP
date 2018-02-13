@@ -75,7 +75,7 @@
                 </div>
             </a>
             
-            <a href="#"> <!-- New Books -->
+            <a href="new_books/new_books.php"> <!-- New Books -->
                 <div class="menu-bar-categories">
                     <img class="images-position" src="img/newbooks_logo3.png" alt="New books">
                     <p class="text-position">New Books</p>     
