@@ -82,6 +82,7 @@
 
         <div class="AgregarFormulario">
             <p class="AnadiendoUsuario">Actualizando Usuario</p>
+            <div class="formulario">
             <form action="#" method="post">
             <?php
                 echo '<label for=usuario>Usuario:';
@@ -108,6 +109,7 @@
                         }
                     echo '</select>';
                 echo '</label>';
+                echo '</div>';
                 echo "<br>";
             ?>
                 <input class="ButtonInsert" type="submit" name="Insertar" value="Actualizar">

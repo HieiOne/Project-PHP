@@ -82,6 +82,7 @@
 
         <div class="AgregarFormulario">
             <p class="AnadiendoLibro">Actualizando libro</p>
+            <div class="formulario">
             <form action="#" method="post">
             <?php
                 echo '<label for=nombre>Nombre:';
@@ -120,6 +121,7 @@
                         }
                     echo '</select>';
                 echo '</label>';
+                echo '</div>';
                 echo "<br>";
             ?>
                 <input class="ButtonInsert" type="submit" name="Insertar" value="Actualizar">
