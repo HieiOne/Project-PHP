@@ -233,8 +233,8 @@
 /* Start of Books */
 
 .book-rows {
-    width: 90%;
-    height: 30%;
+    width: 95%;
+    height: 45%;
     margin-top: 1.2%;
     margin-left: auto;
     margin-right: auto;
@@ -245,11 +245,91 @@
 }
 
 .book {
-    width: 16.5%;
+    position: relative;
+    width: 17.5%;
     margin-left: 2.5%;
+    margin-top: 1%;
     height: 100%;
-    border: 0.1px solid black;
     display: inline-block;
+    vertical-align: top;
+}
+
+.book img {
+    display: block;
+    width: 100%;
+    height: 70%;
+}
+
+.names-books {
+    text-overflow: ellipsis;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    display: block;
+    font-size: 12px;
+    margin-top: 2%;
+    color: black;
+    font-weight: bold;
+}
+
+.discount-books {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 3px solid red;
+    font-weight: bold;
+    background-color: red;
+    border-color: black;
+    border-radius: 50%;
+    padding: 2%;
+}
+
+.price-books {
+    display: block;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.price-books-discount-before {
+    display: block;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration-line: line-through;
+    opacity: 0.6;
+    float: right;
+    margin-left: 2%;
+}
+
+.price-books-discount {
+    display: block;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.buy-books {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 10%;
+    border-radius: 10px;
+    margin-top: 3%;
+    cursor: pointer;
+    color: #ccb179;
+    font-weight: bold;
+    border-color: #522507;
+    background-color: #522507;
+}
+
+.buy-books:hover {
+    background-color: #ccb179;
+    color: #522507;
 }
 
 .books-titles {

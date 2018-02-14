@@ -66,8 +66,8 @@
 
         <!-- End of Top bar -->
 
-        <!-- Start of Showing new books -->
-        <p class="newbooks-headtitle">New Books</p>
+        <!-- Start of Showing Promotions -->
+        <p class="newbooks-headtitle">Promotions</p>
         <!-- <div class="new-books"> -->
             <?php
                 $query_count = "SELECT * FROM libros WHERE oferta > 0";
@@ -116,7 +116,7 @@
         </div>
         <br>
 
-        <!-- End of showing new books -->
+        <!-- End of showing Promotions -->
 
 
     </body>
