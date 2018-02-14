@@ -238,7 +238,8 @@
     margin-top: 1.2%;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid black;
+    border: 3px solid #ccb179;
+    border-radius: 10px;
     overflow: auto;
     overflow-y: hidden;
     white-space: nowrap;

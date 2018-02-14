@@ -176,7 +176,6 @@
             <span class="books-titles">Tops of Categories</span>
             <div class="book-rows">
                 <?php // Most sold ones of every category
-                    // $query_tops = "SELECT nombre,isbn,precio,oferta FROM libros ORDER BY veces_vendido DESC LIMIT 0,9";
                     $query_tops = "SELECT book.* FROM libros book INNER JOIN (SELECT categorias,MAX(veces_vendido) AS MaxVendido FROM libros GROUP BY categorias) groupedbook ON book.categorias = groupedbook.categorias AND book.veces_vendido = groupedbook.MaxVendido";
                     $result_tops = mysqli_query($db,$query_tops);
 
