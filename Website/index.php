@@ -68,7 +68,7 @@
                 </div>
 			</a>
 				
-            <a href="#"> <!-- Promotions -->
+            <a href="promotions/promotions.php"> <!-- Promotions -->
                 <div class="menu-bar-categories">
                     <img class="images-position" src="img/promotion_logo1.png" alt="Promotions">
                     <p class="text-position">Promotions</p>                    
