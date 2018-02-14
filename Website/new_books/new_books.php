@@ -68,7 +68,6 @@
 
         <!-- Start of Showing new books -->
         <p class="newbooks-headtitle">New Books</p>
-        <!-- <div class="new-books"> -->
             <?php
                 $query_count = "SELECT * FROM libros";
                 $result_count = mysqli_query($db,$query_count);

@@ -56,7 +56,7 @@
         <!-- Menu bar -->
 
         <div class="menu-bar">
-		   <a href="#"> <!-- Categories -->
+		   <a href="categories/categories.php"> <!-- Categories -->
                 <div class="menu-bar-categories drop-menu"> 
                     <img class="images-position" src="img/category_logo1.png" alt="Categories">
                     <p class="text-position">Categories</p>

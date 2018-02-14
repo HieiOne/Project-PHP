@@ -1,4 +1,4 @@
-Version 0.7.1
+Version 0.8.0
 
 DONE 0.- Changed promotions head title
 DONE 1.- CENTRAR LOS FIELDS EN AGREGAR
@@ -10,7 +10,7 @@ DONE 4.- PROFILE -> RESTO INFORMACION USUARIO || SECURITY -> PASSWORD
 DONE 7.- MOSTRAR LIBROS ; BESTSELLERS, TOPS OF TOPICS
 8.- 
 	8.1 - CATEGORIAS
-	8.1.1 - CATEGORIAS pagina al clicar en el div
+DONE	8.1.1 - CATEGORIAS pagina al clicar en el div
 DONE	8.2 - PROMOCIONES, IMPLEMENTED DISCOUNTS, IMPLEMENTED PAGES, FIXED PAGES
 DONE	8.3 - NUEVOS LIBROS, IMPLEMENTED DISCOUNTS, IMPLEMENTED PAGES
 9.- CAMBIAR ICONO DE LOGIN
@@ -22,3 +22,4 @@ DONE 15.- Error al registrarse y login fallido
 DONE 16.- Arreglar el perfil, que si le falta un puñetero campo no cambia
 DONE 17.- Eliminar columna imagen de DB y que encuentre imagenes por el ISBN
 DONE 18.- Links categorias dinamicos
+19.- IMPLEMENTAR IMAGEN ALTERNATIVA EN TODOS LOS LIBROS (newbooks,promotions,index...)
