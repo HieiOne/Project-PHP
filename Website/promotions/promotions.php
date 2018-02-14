@@ -70,7 +70,7 @@
         <p class="newbooks-headtitle">New Books</p>
         <!-- <div class="new-books"> -->
             <?php
-                $query_count = "SELECT * FROM libros";
+                $query_count = "SELECT * FROM libros WHERE oferta > 0";
                 $result_count = mysqli_query($db,$query_count);
                 $row_cnt = mysqli_num_rows($result_count);
                 $results_page = 8;
