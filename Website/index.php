@@ -61,9 +61,23 @@
                     <img class="images-position" src="img/category_logo1.png" alt="Categories">
                     <p class="text-position">Categories</p>
 					<div class="drop-content">
-						<a class="drop-content-links" href="#">Link 1</a>
-						<a class="drop-content-links" href="#">Link 2</a>
-						<a class="drop-content-links" href="#">Link 3</a>
+                        <?php
+                            $db = mysqli_connect("127.0.0.1", "root", "toor", "proyectophp");
+        
+                            if (!$db) {
+                                echo "Error: Unable to connect to MySQL." . PHP_EOL;
+                                echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+                                echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+                                exit;
+                            }
+
+                            $query = "SELECT categorias FROM libros GROUP BY categorias";
+                            $result = mysqli_query($db,$query);
+                            
+                            while ($array = mysqli_fetch_array($result)) {
+                                echo '<a class="drop-content-links" href="#">'.$array['categorias'].'</a>';
+                            }
+                        ?>
 					</div>
                 </div>
 			</a>

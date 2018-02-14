@@ -1,4 +1,4 @@
-Version 0.6.1
+Version 0.6.2
 
 DONE 1.- CENTRAR LOS FIELDS EN AGREGAR
 DONE 2.- COMPROBAR LOS CAMPOS AL AGREGAR UN USUARIO (CUANDO PULSE AGREGAR, COMPROBAR ERRORES Y SI HAY MOSTRARLOS, SI NO CONTINUAR)
@@ -19,3 +19,4 @@ DONE 14.- Agregar botones de regresar en Profile, Support, Users y Books
 DONE 15.- Error al registrarse y login fallido
 DONE 16.- Arreglar el perfil, que si le falta un puñetero campo no cambia
 DONE 17.- Eliminar columna imagen de DB y que encuentre imagenes por el ISBN
+DONE 18.- Links categorias dinamicos
