@@ -68,9 +68,25 @@
 
         <!-- Start of Showing new books -->
         <p class="newbooks-headtitle">New Books</p>
-        <div class="new-books">
+        <!-- <div class="new-books"> -->
             <?php
-                $query = "SELECT nombre,isbn,precio,oferta FROM libros ORDER BY add_date DESC LIMIT 0,11";
+                $query_count = "SELECT * FROM libros";
+                $result_count = mysqli_query($db,$query_count);
+                $row_cnt = mysqli_num_rows($result_count);
+                $results_page = 8;
+                $number_of_pages = ceil($row_cnt/$results_page);
+
+                // Pagina actual
+                if (!isset($_GET['page'])) {
+                    $page = 1;
+                } 
+                else {
+                    $page = $_GET['page'];
+                }
+
+                $first_result = ($page-1)*$results_page;
+
+                $query = "SELECT nombre,isbn,precio,oferta FROM libros ORDER BY add_date DESC LIMIT "."$first_result,"."$results_page";
                 $result = mysqli_query($db,$query);
                 
                 while ($array = mysqli_fetch_array($result)) {
@@ -94,9 +110,20 @@
                     echo '</div>';
                 }
                 
+                
                 mysqli_close($db);
             ?>
+        <!-- </div> -->
+
+        <div class="pages">
+                <?php
+                    for ($page=1;$page<=$number_of_pages;$page++) { 
+                        echo '<a class="pagesbuttons" href="new_books.php?page='.$page.'">'.$page.'</a>  ';
+                    }
+                ?>
         </div>
+        <br>
+
         <!-- End of showing new books -->
 
 
