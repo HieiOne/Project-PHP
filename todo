@@ -1,4 +1,4 @@
-Version 0.8.0
+Version 0.9.0
 
 DONE 0.- Changed promotions head title
 DONE 1.- CENTRAR LOS FIELDS EN AGREGAR
@@ -8,8 +8,8 @@ DONE 4.- PROFILE -> RESTO INFORMACION USUARIO || SECURITY -> PASSWORD
 5.- Patterns en el INPUT FIELDS de Profile
 6.- IMPLEMENTAR CART (NewBooks,Categorias,Index,Promotions)
 DONE 7.- MOSTRAR LIBROS ; BESTSELLERS, TOPS OF TOPICS
-8.- 
-	8.1 - CATEGORIAS
+DONE 8.- 
+DONE	8.1 - CATEGORIAS
 DONE	8.1.1 - CATEGORIAS pagina al clicar en el div
 DONE	8.2 - PROMOCIONES, IMPLEMENTED DISCOUNTS, IMPLEMENTED PAGES, FIXED PAGES
 DONE	8.3 - NUEVOS LIBROS, IMPLEMENTED DISCOUNTS, IMPLEMENTED PAGES
@@ -23,3 +23,5 @@ DONE 16.- Arreglar el perfil, que si le falta un puñetero campo no cambia
 DONE 17.- Eliminar columna imagen de DB y que encuentre imagenes por el ISBN
 DONE 18.- Links categorias dinamicos
 19.- IMPLEMENTAR IMAGEN ALTERNATIVA EN TODOS LOS LIBROS (newbooks,promotions,index...)
+20.- Fix typos (Psycologhy -> Psychology)
+21.- Add links to the image of books to go to their 'site'

@@ -75,7 +75,7 @@
                             $result = mysqli_query($db,$query);
                             
                             while ($array = mysqli_fetch_array($result)) {
-                                echo '<a class="drop-content-links" href="#">'.$array['categorias'].'</a>';
+                                echo '<a class="drop-content-links" href="categories/categories.php?category='.$array['categorias'].'">'.$array['categorias'].'</a>';
                             }
                         ?>
 					</div>
