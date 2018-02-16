@@ -87,7 +87,7 @@
                 echo '</div>';
             }
             else {
-                $query = "SELECT nombre,isbn,precio,oferta FROM libros WHERE categorias='$_GET[category]'";
+                $query = "SELECT id,nombre,isbn,precio,oferta FROM libros WHERE categorias='$_GET[category]'";
                 $result = mysqli_query($db,$query);
                 
                 while ($array = mysqli_fetch_array($result)) {
@@ -96,7 +96,9 @@
                             echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books">'.$array[precio].' €</span>';
-                            echo '<button class="buy-books" name="add" type="submit" value="'.$array[isbn].'">BUY</button>';
+                            echo '<form action="../panel/panel_control.php" method="post">';
+                                echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
+                            echo '</form>';
                         }
                         else {
                             $descuento = $array[oferta]*$array[precio]/100;
@@ -106,7 +108,9 @@
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books-discount-before">'.$array[precio].' €</span>';
                             echo '<span class="price-books-discount">'.$precio.' €</span>';
-                            echo '<button class="buy-books" name="add" type="submit" value="'.$array[isbn].'">BUY</button>';
+                            echo '<form action="../panel/panel_control.php" method="post">';
+                                echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
+                            echo '</form>';
                         }
                     echo '</div>';
                 }

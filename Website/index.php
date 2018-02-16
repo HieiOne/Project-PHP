@@ -117,7 +117,7 @@
         <span class="books-titles">Highlights</span>
             <div class="book-rows">
                 <?php // Ordered by the ones added the earliest and most sold
-                    $query_highlights = "SELECT nombre,isbn,precio,oferta FROM libros ORDER BY add_date DESC, veces_vendido DESC LIMIT 0,9";
+                    $query_highlights = "SELECT id,nombre,isbn,precio,oferta FROM libros ORDER BY add_date DESC, veces_vendido DESC LIMIT 0,9";
                     $result_highlights = mysqli_query($db,$query_highlights);
 
                     while($array = mysqli_fetch_array($result_highlights)) {
@@ -126,7 +126,9 @@
                             echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books">'.$array[precio].' €</span>';
-                            echo '<button class="buy-books" name="add" type="submit" value="'.$array[isbn].'">BUY</button>';
+                            echo '<form action="../panel/panel_control.php" method="post">';
+                                echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
+                            echo '</form>';
                         }
                         else {
                             $descuento = $array[oferta]*$array[precio]/100;
@@ -136,7 +138,9 @@
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books-discount-before">'.$array[precio].' €</span>';
                             echo '<span class="price-books-discount">'.$precio.' €</span>';
-                            echo '<button class="buy-books" name="add" type="submit" value="'.$array[isbn].'">BUY</button>';
+                            echo '<form action="../panel/panel_control.php" method="post">';
+                                echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
+                            echo '</form>';
                         }
                         echo '</div>';
                     }
@@ -147,7 +151,7 @@
             <span class="books-titles">Bestsellers</span>
             <div class="book-rows">
                 <?php // Ordered by most sold
-                    $query_bestsellers = "SELECT nombre,isbn,precio,oferta FROM libros ORDER BY veces_vendido DESC LIMIT 0,9";
+                    $query_bestsellers = "SELECT id,nombre,isbn,precio,oferta FROM libros ORDER BY veces_vendido DESC LIMIT 0,9";
                     $result_bestsellers = mysqli_query($db,$query_bestsellers);
                     while($array = mysqli_fetch_array($result_bestsellers)) {
                         echo '<div class="book">';
@@ -155,7 +159,9 @@
                             echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books">'.$array[precio].' €</span>';
-                            echo '<button class="buy-books" name="add" type="submit" value="'.$array[isbn].'">BUY</button>';
+                            echo '<form action="../panel/panel_control.php" method="post">';
+                                echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
+                            echo '</form>';
                         }
                         else {
                             $descuento = $array[oferta]*$array[precio]/100;
@@ -165,7 +171,9 @@
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books-discount-before">'.$array[precio].' €</span>';
                             echo '<span class="price-books-discount">'.$precio.' €</span>';
-                            echo '<button class="buy-books" name="add" type="submit" value="'.$array[isbn].'">BUY</button>';
+                            echo '<form action="../panel/panel_control.php" method="post">';
+                                echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
+                            echo '</form>';
                         }
                         echo '</div>';
                     }
@@ -185,7 +193,9 @@
                             echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books">'.$array[precio].' €</span>';
-                            echo '<button class="buy-books" name="add" type="submit" value="'.$array[isbn].'">BUY</button>';
+                            echo '<form action="../panel/panel_control.php" method="post">';
+                                echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
+                            echo '</form>';
                         }
                         else {
                             $descuento = $array[oferta]*$array[precio]/100;
@@ -195,7 +205,9 @@
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books-discount-before">'.$array[precio].' €</span>';
                             echo '<span class="price-books-discount">'.$precio.' €</span>';
-                            echo '<button class="buy-books" name="add" type="submit" value="'.$array[isbn].'">BUY</button>';
+                            echo '<form action="../panel/panel_control.php" method="post">';
+                                echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
+                            echo '</form>';
                         }
                         echo '</div>';
                     }

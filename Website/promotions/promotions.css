@@ -202,7 +202,6 @@ input[type=text] { /* Format of search bar */
 }
 
 .names-books {
-    text-overflow: ellipsis;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;

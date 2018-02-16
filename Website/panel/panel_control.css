@@ -224,15 +224,126 @@ input[type=text] { /* Format of search bar */
 
 /* End of Control top bar */
 
-/* Control panel Cart.. Just lazy to do this right now */
+/* Control panel Cart */
 
 .control-panel-cart {
-    width: 80%;
+    width: 90%;
     height: 45%;
     margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
+    border: 4px solid #53301A;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.item {
+    margin: 1%;
+    width: 97.5%;
+    height: 35%;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: relative;
+}
+
+.item-image {
+    display: block;
     border: 1px solid black;
+    width: 10%;
+    height: 100%;
+    float: left;
+}
+
+.item-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.item-text {
+    width: 33%;
+    height: 100%;
+    margin-left: 1%;
+    font-size: 11.5px;
+    font-weight: bold;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: 70px;
+    float: left;
+}
+
+.item-buttons {
+    float: right;
+    width: 54%;
+    height: 100%;
+}
+
+.item-minus {
+    display: block;
+    position: absolute;
+    float: left;
+    border: 2px solid black;
+    margin-left: 1%;
+    border-radius: 3px;
+    top: 36%;
+    width: 2.7%;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.item-quantity {
+    display: block;
+    position: absolute;
+    float: left;
+    margin-left: 1%;
+    top: 18%;
+    right: 48.2%; 
+}
+
+.item-plus {
+    display: block;
+    position: absolute;
+    float: left;
+    border: 2px solid black;
+    margin-left: 1%;
+    border-radius: 3px;
+    top: 36%;
+    right: 44.5%;
+    width: 2.7%;
+    background-color: green;
+    font-weight: bold;
+}
+
+.item-price {
+    display: block;
+    position: absolute;
+    float: left;
+    margin-left: 1%;
+    top: 18%;
+    right: 38.5%;
+    font-weight: bold;
+}
+
+.item-remove {
+    display: block;
+    position: absolute;
+    float: left;
+    border: 2px solid black;
+    margin-left: 1%;
+    border-radius: 5px;
+    height: 35%;
+    top: 28%;
+    right: 27.5%;
+    background-color: red;
+    font-weight: bold;
+}
+
+.total-price {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 /* End of Control panel Cart */
@@ -242,6 +353,7 @@ input[type=text] { /* Format of search bar */
     position: absolute;
     left: 20%;
     right: 0;
+    margin-bottom: 1.5%;
 }
 
 /* Creating default margins */
