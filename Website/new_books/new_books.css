@@ -280,6 +280,11 @@ input[type=text] { /* Format of search bar */
     background-color: #efe4b0;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 /* End of New books */
 
 /* Creating default margins */

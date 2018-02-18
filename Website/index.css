@@ -344,6 +344,12 @@
     height: 5%;
 }
 
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 /* End of Books */
 
 

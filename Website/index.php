@@ -123,9 +123,11 @@
                     while($array = mysqli_fetch_array($result_highlights)) {
                         echo '<div class="book">';
                         if($array['oferta'] == 0) {
+                            echo "<a href='../book/book.php?isbn=$array[isbn]'>";
                             echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books">'.$array[precio].' €</span>';
+                            echo '</a>';
                             echo '<form action="../panel/panel_control.php" method="post">';
                                 echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
                             echo '</form>';
@@ -133,11 +135,13 @@
                         else {
                             $descuento = $array[oferta]*$array[precio]/100;
                             $precio = $array[precio] - $descuento;
+                            echo "<a href='../book/book.php?isbn=$array[isbn]'>";
                             echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
                             echo '<span class="discount-books">-'.$array[oferta].'%</span>';
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books-discount-before">'.$array[precio].' €</span>';
                             echo '<span class="price-books-discount">'.$precio.' €</span>';
+                            echo '</a>';
                             echo '<form action="../panel/panel_control.php" method="post">';
                                 echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
                             echo '</form>';
@@ -156,9 +160,11 @@
                     while($array = mysqli_fetch_array($result_bestsellers)) {
                         echo '<div class="book">';
                         if($array['oferta'] == 0) {
+                            echo "<a href='../book/book.php?isbn=$array[isbn]'>";
                             echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books">'.$array[precio].' €</span>';
+                            echo '</a>';
                             echo '<form action="../panel/panel_control.php" method="post">';
                                 echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
                             echo '</form>';
@@ -166,11 +172,13 @@
                         else {
                             $descuento = $array[oferta]*$array[precio]/100;
                             $precio = $array[precio] - $descuento;
+                            echo "<a href='../book/book.php?isbn=$array[isbn]'>";
                             echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
                             echo '<span class="discount-books">-'.$array[oferta].'%</span>';
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books-discount-before">'.$array[precio].' €</span>';
                             echo '<span class="price-books-discount">'.$precio.' €</span>';
+                            echo '</a>';
                             echo '<form action="../panel/panel_control.php" method="post">';
                                 echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
                             echo '</form>';
@@ -190,9 +198,11 @@
                     while($array = mysqli_fetch_array($result_tops)) {
                         echo '<div class="book">';
                         if($array['oferta'] == 0) {
+                            echo "<a href='../book/book.php?isbn=$array[isbn]'>";
                             echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books">'.$array[precio].' €</span>';
+                            echo '</a>';
                             echo '<form action="../panel/panel_control.php" method="post">';
                                 echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
                             echo '</form>';
@@ -200,11 +210,13 @@
                         else {
                             $descuento = $array[oferta]*$array[precio]/100;
                             $precio = $array[precio] - $descuento;
+                            echo "<a href='../book/book.php?isbn=$array[isbn]'>";
                             echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
                             echo '<span class="discount-books">-'.$array[oferta].'%</span>';
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books-discount-before">'.$array[precio].' €</span>';
                             echo '<span class="price-books-discount">'.$precio.' €</span>';
+                            echo '</a>';
                             echo '<form action="../panel/panel_control.php" method="post">';
                                 echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
                             echo '</form>';
