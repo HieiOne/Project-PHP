@@ -1,11 +1,17 @@
 Version 1.0.0
 
+5.- Patterns en el INPUT FIELDS de Profile
+9.- CAMBIAR ICONO DE LOGIN
+19.- IMPLEMENTAR IMAGEN ALTERNATIVA EN TODOS LOS LIBROS (newbooks,promotions,index...)
+20.- Fix typos (Psycologhy -> Psychology)
+22.- Search Bar
+24.- Add buy button in cart which will insert the buy (total price and items) in DB and increase "veces_vendido" in BD
+25.- Cart image of book can also redirect to the book page
 DONE 0.- Changed promotions head title
 DONE 1.- CENTRAR LOS FIELDS EN AGREGAR
 DONE 2.- COMPROBAR LOS CAMPOS AL AGREGAR UN USUARIO (CUANDO PULSE AGREGAR, COMPROBAR ERRORES Y SI HAY MOSTRARLOS, SI NO CONTINUAR)
 DONE 3.- SUPPORT -> GENERAR TICKET	
 DONE 4.- PROFILE -> RESTO INFORMACION USUARIO || SECURITY -> PASSWORD
-5.- Patterns en el INPUT FIELDS de Profile
 DONE 6.- IMPLEMENTAR CART (NewBooks,Categorias,Index,Promotions)
 DONE 7.- MOSTRAR LIBROS ; BESTSELLERS, TOPS OF TOPICS
 DONE 8.- 
@@ -13,7 +19,6 @@ DONE	8.1   - CATEGORIAS
 DONE	8.1.1 - CATEGORIAS pagina al clicar en el div
 DONE	8.2 - PROMOCIONES, IMPLEMENTED DISCOUNTS, IMPLEMENTED PAGES, FIXED PAGES
 DONE	8.3 - NUEVOS LIBROS, IMPLEMENTED DISCOUNTS, IMPLEMENTED PAGES
-9.- CAMBIAR ICONO DE LOGIN
 DONE 11.- Evitar el cambio de color al completar un campo //Aplicar a todos los forms
 DONE 12.- Evitar error en el texto de highlights, bestsellers y tops of topics en bajas resoluciones.
 DONE 13.- Evitar error del texto del logo en bajas resoluciones
@@ -22,9 +27,4 @@ DONE 15.- Error al registrarse y login fallido
 DONE 16.- Arreglar el perfil, que si le falta un puñetero campo no cambia
 DONE 17.- Eliminar columna imagen de DB y que encuentre imagenes por el ISBN
 DONE 18.- Links categorias dinamicos
-19.- IMPLEMENTAR IMAGEN ALTERNATIVA EN TODOS LOS LIBROS (newbooks,promotions,index...)
-20.- Fix typos (Psycologhy -> Psychology)
-21.- Add links to the image of books to go to their 'site'
-22.- Search Bar
 DONE 23.- Books Pages
-24.- Add buy button in cart which will insert the buy (total price and items) in DB
