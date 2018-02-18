@@ -236,7 +236,7 @@ input[type=text] { /* Format of search bar */
 
 .price-books-discount {
     display: block;
-    text-align: right;
+    text-align: center;
     color: #522507;
     font-weight: bold;
     font-size: 30px;
