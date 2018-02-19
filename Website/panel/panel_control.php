@@ -157,12 +157,14 @@
                             echo "</a>";
                             echo '</div>';
 
+                            $descuento = $result[oferta]*$result[precio]/100;
+                            $precio = $result[precio] - $descuento;
                             echo '<form action="" method="post">';
                                 echo '<div class="item-buttons">';
                                     echo '<button class="item-minus" name="RemoveQuantity" type="submit" value='.$result['id'].'>-</button>';
                                     echo "<p class='item-quantity'>$cantidad</p>";
                                     echo '<button class="item-plus" name="AddQuantity" type="submit" value='.$result['id'].'>+</button>';
-                                    echo "<p class='item-price'>$result[precio] €</p>";
+                                    echo "<p class='item-price'>$precio €</p>";
                                     echo '<button class="item-remove" name="Remove" type="submit" value='.$result['id'].'>DELETE</button>';
                                 echo '</div>';
                             echo '</form>';

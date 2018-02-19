@@ -24,12 +24,17 @@
     echo "ID_COMPRA: $id_compra";
     echo "<br>ID USUARIO: $id_usuario";
     foreach ($_SESSION['cart'] as $libro) {
-        $query_precio = "SELECT precio FROM libros WHERE id='$libro[0]'";
+        $query_precio = "SELECT precio,oferta FROM libros WHERE id='$libro[0]'";
         $precio = mysqli_fetch_array(mysqli_query($db,$query_precio));
         echo "<br>ID PRODUCTO: $libro[0] ";
         echo "CANTIDAD: $libro[1]";
         echo " PRECIO: $precio[precio]";
-        $query_insert = "INSERT INTO compras (id_compra, id_usuario, libro, cantidad, precio) VALUES ($id_compra,$id_usuario,$libro[0],$libro[1],$precio[precio])";
+
+        $descuento = $precio[oferta]*$precio[precio]/100;
+        $precio_real = $precio[precio] - $descuento;
+        
+
+        $query_insert = "INSERT INTO compras (id_compra, id_usuario, libro, cantidad, precio) VALUES ($id_compra,$id_usuario,$libro[0],$libro[1],$precio_real)";
         mysqli_query($db, $query_insert);
     }
 
