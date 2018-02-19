@@ -147,10 +147,14 @@
                         $result = mysqli_fetch_array(mysqli_query($db,$query));
                         echo '<div class="item">';
                             echo '<div class="item-image">';
+                            echo "<a href='../book/book.php?isbn=$result[isbn]'>";
                                 echo '<img class="category-image" src="../img/libros/'.$result[isbn].'.jpg" onerror='.'this.src="../img/nodisponible.png";'.'>';
+                            echo "</a>";
                             echo '</div>';
                             echo '<div class="item-text">';
+                            echo "<a href='../book/book.php?isbn=$result[isbn]'>";
                                 echo "<p>$result[nombre]</p>";
+                            echo "</a>";
                             echo '</div>';
 
                             echo '<form action="" method="post">';
