@@ -270,8 +270,8 @@ input[type=text] { /* Format of search bar */
     overflow: hidden;
     white-space: nowrap;
     vertical-align: middle;
-    line-height: 70px;
     float: left;
+    margin-top: 4%;
 }
 
 .item-buttons {
@@ -294,12 +294,9 @@ input[type=text] { /* Format of search bar */
 }
 
 .item-quantity {
-    display: block;
-    position: absolute;
     float: left;
-    margin-left: 1%;
-    top: 18%;
-    right: 48.2%; 
+    margin-left: 9%;
+    margin-top: 8.5%;
 }
 
 .item-plus {
@@ -318,11 +315,8 @@ input[type=text] { /* Format of search bar */
 
 .item-price {
     display: block;
-    position: absolute;
-    float: left;
-    margin-left: 1%;
-    top: 18%;
-    right: 38.5%;
+    margin-left: 24%;
+    margin-top: 8.5%;
     font-weight: bold;
 }
 
