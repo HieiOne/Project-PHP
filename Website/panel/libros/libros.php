@@ -31,7 +31,7 @@
             </a>
 
             <div class="top-bar-search">
-                <form>
+                <form action="../../search/search.php" method=post>
                         <input type="text" name="search" placeholder="Search by title, author...">
                 </form>
             </div>

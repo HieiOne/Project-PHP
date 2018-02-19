@@ -1,8 +1,8 @@
-Version 1.1.4
+Version 1.2.0
 
 5.- Patterns en el INPUT FIELDS de Profile
 9.- CAMBIAR ICONO DE LOGIN
-22.- Search Bar
+28.- Change search bar style
 DONE 0.- Changed promotions head title
 DONE 1.- CENTRAR LOS FIELDS EN AGREGAR
 DONE 2.- COMPROBAR LOS CAMPOS AL AGREGAR UN USUARIO (CUANDO PULSE AGREGAR, COMPROBAR ERRORES Y SI HAY MOSTRARLOS, SI NO CONTINUAR)
@@ -25,6 +25,7 @@ DONE 17.- Eliminar columna imagen de DB y que encuentre imagenes por el ISBN
 DONE 18.- Links categorias dinamicos
 DONE 19.- IMPLEMENTAR IMAGEN ALTERNATIVA EN TODOS LOS LIBROS (newbooks,promotions,index...)
 DONE 20.- Fix typos (Psycologhy -> Psychology)
+DONE 22.- Search Bar
 DONE 23.- Books Pages
 DONE 24.- Add buy button in cart which will insert the buy (total price and items) in DB and increase "veces_vendido" in BD
 DONE 25.- Cart image of book can also redirect to the book page

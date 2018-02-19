@@ -11,10 +11,12 @@
         echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
         exit;
     }
+
+    $search = $_POST[search];
 ?>
 
 <html>
-    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="search.css">
     <head>
         <title>Library of Nalanda</title>
         <link rel="icon" href="../img/Logo.png">
@@ -36,7 +38,7 @@
             </a>
 
             <div class="top-bar-search">
-                <form action="../search/search.php" method=post>
+                <form action="search.php" method=post>
                         <input type="text" name="search" placeholder="Search by title, author...">
                 </form>
             </div>
@@ -66,28 +68,10 @@
 
         <!-- End of Top bar -->
 
-       <!-- Start of Categories -->
-       <p class="categories-headtitle">Categories</p>
+        <!-- Start of Showing Search Result -->
+            <?php
 
-        <?php
-            if($_GET['category'] == NULL) {
-                echo '<div class="categories">';
-
-                $query = "SELECT categorias FROM libros GROUP BY categorias";
-                $result = mysqli_query($db,$query);
-
-                while ($array = mysqli_fetch_array($result)) {
-                    echo '<a href="categories.php?category='.$array[categorias].'">';
-                    echo '<div class="category">';
-                    echo '<img class="category-image" src="../img/categories/'.$array[categorias].'.png" onerror='.'this.src="../img/nodisponible.png";'.'>';
-                    echo '<span class="category-text">'.$array[categorias].'</span>';
-                    echo '</div>';
-                    echo '</a>';
-                }
-                echo '</div>';
-            }
-            else {
-                $query = "SELECT id,nombre,isbn,precio,oferta FROM libros WHERE categorias='$_GET[category]'";
+                $query = "SELECT id,nombre,isbn,precio,oferta FROM libros WHERE Match(nombre,editorial,autor,isbn,categorias) AGAINST ('\"$search\"' IN BOOLEAN MODE)";
                 $result = mysqli_query($db,$query);
                 
                 while ($array = mysqli_fetch_array($result)) {
@@ -119,11 +103,11 @@
                     echo '</div>';
                 }
                 
+                
                 mysqli_close($db);
-            }
-        ?>
+            ?>
+        <!-- End of showing Search Result -->
 
-       <!-- End of Categories -->
 
     </body>
 </html>
