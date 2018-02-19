@@ -171,7 +171,12 @@
 
                     ?>                
             </div>
-                <?php echo "<br><p class='total-price'>Precio total: $precio_total €</p>"; ?>
+                <?php
+                    echo '<br> <form action="buy_code.php" method="post">';
+                        echo '<button class="buy-books" name="Add" type="submit" value="'.$array[id].'">BUY</button>';
+                    echo '</form>';
+                    echo "<p class='total-price'>Precio total: $precio_total €</p>";
+                ?>
 
         <!-- End of Control Panel Cart -->
 

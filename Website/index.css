@@ -190,7 +190,8 @@
 			color: #53301A;
 			font-weight: bold;
 			text-decoration: none;
-			display: block;
+            display: block;
+            text-transform: capitalize;
 		}
 		
 		.drop-content a:hover { /* Change on hover */

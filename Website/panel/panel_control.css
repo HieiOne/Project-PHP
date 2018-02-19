@@ -346,6 +346,24 @@ input[type=text] { /* Format of search bar */
     text-align: center;
 }
 
+.buy-books {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ccb179;
+    font-weight: bold;
+    border-color: #522507;
+    background-color: #522507;
+}
+
+.buy-books:hover {
+    background-color: #ccb179;
+    color: #522507;
+}
+
 /* End of Control panel Cart */
 
 /* Admin */

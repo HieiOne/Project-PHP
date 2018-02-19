@@ -94,7 +94,7 @@
                     echo '<div class="book">';
                         if($array['oferta'] == 0) {
                             echo "<a href='../book/book.php?isbn=$array[isbn]'>";
-                            echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
+                            echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".' onerror='.'this.src="../img/nodisponible.png";'.'>';
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books">'.$array[precio].' €</span>';
                             echo '</a>';
@@ -106,7 +106,7 @@
                             $descuento = $array[oferta]*$array[precio]/100;
                             $precio = $array[precio] - $descuento;
                             echo "<a href='../book/book.php?isbn=$array[isbn]'>";
-                            echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".'>';
+                            echo '<img class="images-books" src='."../img/libros/$array[isbn].jpg".' onerror='.'this.src="../img/nodisponible.png";'.'>';
                             echo '<span class="discount-books">-'.$array[oferta].'%</span>';
                             echo '<span class="names-books">'.$array[nombre].'</span>';
                             echo '<span class="price-books-discount-before">'.$array[precio].' €</span>';

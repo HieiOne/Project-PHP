@@ -195,7 +195,7 @@ input[type=text] { /* Format of search bar */
     color: black;
     font-size: 24px;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .category-image {
