@@ -83,7 +83,7 @@
                 <input type="info" name="isbn" required minlength="10" maxlength="13" pattern="[0-9]+" title="Solo numeros" placeholder="ISBN.."><br>
                 <select name="categorias">
                     <option value="youth">Youth</option>
-                    <option value="psycologhy">Psycologhy</option>
+                    <option value="psycologhy">Psychologhy</option>
                     <option value="black">Black</option>
                     <option value="horror">Horror</option>
                     <option value="history">History</option>
