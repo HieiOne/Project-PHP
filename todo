@@ -1,4 +1,4 @@
-Version 1.1.2
+Version 1.1.3
 
 5.- Patterns en el INPUT FIELDS de Profile
 9.- CAMBIAR ICONO DE LOGIN
@@ -29,3 +29,4 @@ DONE 23.- Books Pages
 DONE 24.- Add buy button in cart which will insert the buy (total price and items) in DB and increase "veces_vendido" in BD
 DONE 25.- Cart image of book can also redirect to the book page
 DONE 26.- Add offers to cart
+DONE 27.- Increase "veces_vendido" foreach bought book

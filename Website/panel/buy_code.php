@@ -36,6 +36,8 @@
 
         $query_insert = "INSERT INTO compras (id_compra, id_usuario, libro, cantidad, precio) VALUES ($id_compra,$id_usuario,$libro[0],$libro[1],$precio_real)";
         mysqli_query($db, $query_insert);
+        $query_update_libros = "UPDATE libros SET veces_vendido = veces_vendido + 1 WHERE id=$libro[0]";
+        mysqli_query($db,$query_update_libros);
     }
 
     unset($_SESSION['cart']);
