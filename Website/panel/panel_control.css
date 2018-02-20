@@ -271,9 +271,8 @@ input[type=text] { /* Format of search bar */
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    vertical-align: middle;
     float: left;
-    margin-top: 4%;
+    line-height: 75px;
 }
 
 .item-buttons {
@@ -296,9 +295,10 @@ input[type=text] { /* Format of search bar */
 }
 
 .item-quantity {
+    position: absolute;
     float: left;
-    margin-left: 9%;
-    margin-top: 8.5%;
+    margin-left: 4.5%;
+    top: 19%;
 }
 
 .item-plus {
@@ -316,9 +316,11 @@ input[type=text] { /* Format of search bar */
 }
 
 .item-price {
+    position: absolute;
     display: block;
-    margin-left: 24%;
-    margin-top: 8.5%;
+    margin-left: 10%;
+    float: left;
+    top: 19%;
     font-weight: bold;
 }
 
