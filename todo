@@ -1,8 +1,7 @@
-Version 1.2.0
+Version 1.2.2
 
 5.- Patterns en el INPUT FIELDS de Profile
 9.- CAMBIAR ICONO DE LOGIN
-28.- Change search bar style
 DONE 0.- Changed promotions head title
 DONE 1.- CENTRAR LOS FIELDS EN AGREGAR
 DONE 2.- COMPROBAR LOS CAMPOS AL AGREGAR UN USUARIO (CUANDO PULSE AGREGAR, COMPROBAR ERRORES Y SI HAY MOSTRARLOS, SI NO CONTINUAR)
@@ -31,3 +30,4 @@ DONE 24.- Add buy button in cart which will insert the buy (total price and item
 DONE 25.- Cart image of book can also redirect to the book page
 DONE 26.- Add offers to cart
 DONE 27.- Increase "veces_vendido" foreach bought book
+DONE 28.- Change search bar style

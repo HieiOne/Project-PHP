@@ -82,6 +82,8 @@ input[name=search] { /* Format of search bar */
     background-repeat: no-repeat;
     background-position: 10px 5px;
     padding: 1% 3% 1% 40px;
+    font-weight: bold;
+    color: #ccb179;
 }
 
 ::placeholder { /* Text inside Search bar */
