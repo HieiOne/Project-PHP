@@ -5,6 +5,14 @@
     if ($_SESSION['id'] == NULL) { //Si no esta logeado, logeate
         header("Location: ../../login/login.php");
     }
+    $db = mysqli_connect("127.0.0.1", "root", "toor", "proyectophp");
+    
+    if (!$db) {
+        echo "Error: Unable to connect to MySQL." . PHP_EOL;
+        echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+        echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+        exit;
+    }
 ?>
 
 
@@ -55,7 +63,28 @@
                         ?>
                 </div>
 
-                <a href="#"><img class="top-bar-buttons-cart" src="../../img/Cart1.png" alt="Cart"></a>                                   
+                <div class="cart-dropdown">
+                    <a href="../../login/login.php"><img class="top-bar-buttons-cart" src="../../img/Cart1.png" alt="Cart"></a>
+                    <?php
+                        if ($_SESSION['cart'] != NULL) {
+                            echo '<div class="cart-dropdown-content">';
+                            foreach ($_SESSION['cart'] as $valor) {
+                                $cantidad = $valor[1];
+                                $query = "SELECT * from libros WHERE id='$valor[0]'";
+                                $result = mysqli_fetch_array(mysqli_query($db,$query));
+                                echo '<a href="../../book/book.php?isbn='.$result["isbn"].'">';
+                                    echo '<div class="image-dropdown">';
+                                        echo '<img src="../../img/libros/'.$result["isbn"].'.jpg">';
+                                    echo '</div>';
+                                    echo '<div class="text-dropdown">';
+                                        echo '<p>'.$result["nombre"].'</p>';
+                                    echo '</div>';
+                                echo '</a>';
+                            }
+                            echo '</div>';
+                        }
+                    ?>
+                </div>                                     
             </div>
         </div>
 
@@ -65,14 +94,6 @@
         <?php // Recogiendo info del usuario
             $id = $_SESSION['id'];
 
-            $db = mysqli_connect("127.0.0.1", "root", "toor", "proyectophp");
-
-            if (!$db) {
-                echo "Error: Unable to connect to MySQL." . PHP_EOL;
-                echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-                echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-                exit;
-            }
 
             $query = "SELECT email,usuario,password,direccion,pais,cp,provincia FROM clientes WHERE id='$id'";
             $result = mysqli_fetch_array(mysqli_query($db,$query));
