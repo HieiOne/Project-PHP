@@ -20,5 +20,6 @@
     $query = "DELETE FROM clientes WHERE id='$id'";
     $result = mysqli_query($db,$query);
     $array = mysqli_fetch_array($result);
+    mysqli_close($db);
     header("Location: usuarios.php");
 ?>

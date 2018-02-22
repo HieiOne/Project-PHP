@@ -41,6 +41,8 @@
     }
 
     unset($_SESSION['cart']);
+    mysqli_close($db);
     sleep(0.2);
     header("Location: panel_control.php");
+
 ?>

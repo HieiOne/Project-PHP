@@ -138,6 +138,7 @@
                 for ($page=1;$page<=$number_of_pages;$page++) { 
                     echo '<a class="pagesbuttons" href="libros.php?page='.$page.'">'.$page.'</a>  ';
                 }
+                mysqli_close($db);
             ?>
         </div>
         <!-- End of Books -->

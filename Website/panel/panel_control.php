@@ -218,5 +218,9 @@
         </div>
         <!-- End of ADMIN panel -->
 
+        <?php
+            mysqli_close($db);
+        ?>
+
     </body>
 </html>

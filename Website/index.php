@@ -223,6 +223,8 @@
                         }
                         echo '</div>';
                     }
+                    
+                    mysqli_close($db);
                 ?>
             </div>
 

@@ -144,8 +144,6 @@
             if (isset($_POST['Insertar'])) {
                 header("Location: libros.php");
             }
-
-            mysqli_close($db);
         ?>
 
         <!-- End of Update Books -->

@@ -126,7 +126,9 @@
         
 
         <!-- End of showing Book -->
-
+        <?php
+            mysqli_close($db);
+        ?>
 
     </body>
 </html>

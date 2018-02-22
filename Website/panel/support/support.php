@@ -103,7 +103,8 @@
                     echo "<p class='TicketError'> Error en el ticket, has superado la cantidad de caracteres máximos: 380</p>";
                 }
             }
-
+            
+            mysqli_close($db);
         ?>
 
     </body>
