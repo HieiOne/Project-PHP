@@ -239,57 +239,11 @@ input[type=text] { /* Format of search bar */
     overflow: auto;
 }
 
-.item {
-    margin: 1%;
-    width: 97.5%;
-    height: 35%;
-    border: 2px solid black;
-    border-radius: 8px;
-    position: relative;
-}
-
-.item-image {
-    display: block;
-    border: 1px solid black;
-    width: 10%;
-    height: 100%;
-    float: left;
-}
-
-.item-image img {
-    height: 100%;
-    width: 100%;
-}
-
-.item-text {
-    width: 33%;
-    height: 100%;
-    margin-left: 1%;
-    font-size: 11.5px;
-    font-weight: bold;
-    text-align: center;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    float: left;
-    line-height: 75px;
-}
-
-.item-buttons {
-    float: right;
-    width: 54%;
-    height: 100%;
-}
-
 .item-minus {
     display: block;
-    position: absolute;
     float: left;
     border: 2px solid black;
-    margin-left: 1%;
     border-radius: 3px;
-    top: 36%;
-    width: 2.7%;
     background-color: yellow;
     font-weight: bold;
 }
@@ -303,14 +257,9 @@ input[type=text] { /* Format of search bar */
 
 .item-plus {
     display: block;
-    position: absolute;
     float: left;
     border: 2px solid black;
-    margin-left: 1%;
     border-radius: 3px;
-    top: 36%;
-    right: 44.5%;
-    width: 2.7%;
     background-color: green;
     font-weight: bold;
 }
@@ -325,15 +274,9 @@ input[type=text] { /* Format of search bar */
 }
 
 .item-remove {
-    display: block;
-    position: absolute;
-    float: left;
     border: 2px solid black;
-    margin-left: 1%;
     border-radius: 5px;
-    height: 35%;
-    top: 28%;
-    right: 27.5%;
+    height: 100%;
     background-color: red;
     font-weight: bold;
 }
@@ -361,6 +304,94 @@ input[type=text] { /* Format of search bar */
     background-color: #ccb179;
     color: #522507;
 }
+
+.libro {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1%;
+    height: 35%;
+}
+
+.imagen-libro {
+    width: 12%;
+    height: 100%;
+    float: left;
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+}
+
+.nombre-libro {
+    width: 35%;
+    height: 100%;
+    margin-left: 1%;
+    float: left
+}
+
+.nombre-libro p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    font-size: 11.5px;
+    font-weight: bold;
+}
+
+.botones {
+    position: relative;
+    width: 35%;
+    height: 100%;
+    margin-left: 1%;
+    float: left;
+}
+
+.boton-menos {
+    position: absolute;
+    width: 5%;
+    height: 15%;
+    top: 50%; left: 20%;
+    transform: translate(-50%,-50%);
+}
+
+.boton-mas {
+    position: absolute;
+    width: 5%;
+    height: 15%;
+    top: 50%; left: 45%;
+    transform: translate(-50%,-50%);
+}
+
+.cantidad {
+    position: absolute;
+    width: 5%;
+    height: 15%;
+    top: 50%; left: 33.5%;
+    transform: translate(-50%,-50%);
+    font-weight: bold;
+}
+
+.precio {
+    position: absolute;
+    width: 5%;
+    height: 15%;
+    top: 50%; left: 60%;
+    transform: translate(-50%,-50%);
+    font-weight: bold;
+}
+
+.borrar {
+    position: absolute;
+    width: 25%;
+    height: 60%;
+    top: 50%; left: 95%;
+    transform: translate(-50%,-50%);
+}
+
 
 /* End of Control panel Cart */
 

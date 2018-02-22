@@ -145,29 +145,35 @@
                         $cantidad = $valor[1];
                         $query = "SELECT * from libros WHERE id='$valor[0]'";
                         $result = mysqli_fetch_array(mysqli_query($db,$query));
-                        echo '<div class="item">';
-                            echo '<div class="item-image">';
+                        echo '<div class="libro">';
+                            echo '<div class="imagen-libro">';
                             echo "<a href='../book/book.php?isbn=$result[isbn]'>";
-                                echo '<img class="category-image" src="../img/libros/'.$result[isbn].'.jpg" onerror='.'this.src="../img/nodisponible.png";'.'>';
+                                echo '<img class="imagen" src="../img/libros/'.$result[isbn].'.jpg" onerror='.'this.src="../img/nodisponible.png";'.'>';
                             echo "</a>";
                             echo '</div>';
-                            echo '<div class="item-text">';
+                            echo '<div class="nombre-libro">';
                             echo "<a href='../book/book.php?isbn=$result[isbn]'>";
                                 echo "<p>$result[nombre]</p>";
                             echo "</a>";
                             echo '</div>';
-
+                            // Botones de precio y cantidad
                             $descuento = $result[oferta]*$result[precio]/100;
                             $precio = $result[precio] - $descuento;
-                            echo '<form action="" method="post">';
-                                echo '<div class="item-buttons">';
-                                    echo '<button class="item-minus" name="RemoveQuantity" type="submit" value='.$result['id'].'>-</button>';
-                                    echo "<p class='item-quantity'>$cantidad</p>";
-                                    echo '<button class="item-plus" name="AddQuantity" type="submit" value='.$result['id'].'>+</button>';
-                                    echo "<p class='item-price'>$precio €</p>";
-                                    echo '<button class="item-remove" name="Remove" type="submit" value='.$result['id'].'>DELETE</button>';
-                                echo '</div>';
-                            echo '</form>';
+                            echo '<div class="botones">';
+                                echo '<form method="post">';
+                                    echo '<div class="boton-menos">';
+                                        echo '<button class="item-minus" name="RemoveQuantity" type="submit" value='.$result['id'].'>-</button>';
+                                    echo '</div>';
+                                    echo '<div class="cantidad">'.$cantidad.'</div>';
+                                    echo '<div class="boton-mas">';
+                                        echo '<button class="item-plus" name="AddQuantity" type="submit" value='.$result['id'].'>+</button>';
+                                    echo '</div>';
+                                    echo '<div class="precio">'.$precio.'€</div>';
+                                    echo '<div class="borrar">';
+                                        echo '<button class="item-remove" name="Remove" type="submit" value='.$result['id'].'>DELETE</button>';
+                                    echo '</div>';
+                                echo '</form>';
+                            echo '</div>';
 
                         echo '</div>';
                         for ($i=1; $i <= $cantidad ; $i++) { 
@@ -175,7 +181,7 @@
                         }
                     }
 
-                    ?>                
+                    ?>
             </div>
                 <?php
                     echo '<br> <form action="buy_code.php" method="post">';
