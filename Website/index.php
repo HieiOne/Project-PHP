@@ -65,12 +65,14 @@
                                 $cantidad = $valor[1];
                                 $query = "SELECT * from libros WHERE id='$valor[0]'";
                                 $result = mysqli_fetch_array(mysqli_query($db,$query));
-                                echo '<div class="image-dropdown">';
-                                    echo '<img src="../img/libros/'.$result[isbn].'.jpg">';
-                                echo '</div>';
-                                echo '<div class="text-dropdown">';
-                                    echo '<p>'.$result[nombre].'</p>';
-                                echo '</div>';
+                                echo '<a href="book/book.php?isbn='.$result["isbn"].'">';
+                                    echo '<div class="image-dropdown">';
+                                        echo '<img src="../img/libros/'.$result["isbn"].'.jpg">';
+                                    echo '</div>';
+                                    echo '<div class="text-dropdown">';
+                                        echo '<p>'.$result["nombre"].'</p>';
+                                    echo '</div>';
+                                echo '</a>';
                             }
                             echo '</div>';
                         }
