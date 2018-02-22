@@ -159,11 +159,11 @@ input[name=search] { /* Format of search bar */
 .AgregarFormulario {
     text-align: center;
     margin-top: 2%;
-    width: 100%
+    width: 100%;
 }
 
 input[type=info], select { /* Formato formulario */
-    width: 81%;
+    width: 80%;
     margin-top: 0.5%;
     height: 44px;
     box-sizing: border-box;
@@ -201,14 +201,14 @@ input[type=info], select { /* Formato formulario */
 }
 
 .formulario {
-    margin-right: 0;
     width: 50%;
     margin: 0 auto;
+    margin-right: 30%;
 }
 
 label {
     display: inline-block;
-    width: 100%;
+    width: 135%;
     height: 100%;
     text-align: right;
 }

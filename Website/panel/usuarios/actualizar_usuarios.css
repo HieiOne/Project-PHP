@@ -207,7 +207,7 @@ input, select { /* Formato formulario */
 
 label {
     display: inline-block;
-    width: 100%;
+    width: 120%;
     height: 100%;
     text-align: right;
 }

@@ -233,7 +233,7 @@ input { /* Formato formulario */
 
 label {
     display: inline-block;
-    width: 100%;
+    width: 120%;
     text-align: right;
 }
 
