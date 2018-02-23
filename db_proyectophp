@@ -1,0 +1,145 @@
+-- MySQL dump 10.13  Distrib 5.7.21, for Linux (x86_64)
+--
+-- Host: localhost    Database: proyectophp
+-- ------------------------------------------------------
+-- Server version	5.7.21-0ubuntu0.16.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `clientes`
+--
+
+DROP TABLE IF EXISTS `clientes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `clientes` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) DEFAULT NULL,
+  `usuario` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `permisos` varchar(255) DEFAULT NULL,
+  `direccion` varchar(255) DEFAULT NULL,
+  `pais` varchar(255) DEFAULT NULL,
+  `cp` int(7) DEFAULT NULL,
+  `provincia` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `clientes`
+--
+
+LOCK TABLES `clientes` WRITE;
+/*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
+INSERT INTO `clientes` VALUES (11,'blascogasconiban@hotmail.es','ivanz','$2y$10$8dls5wS4bZWr8Q3bGdbvk.5YcEkqGXlp4arnhzlQ8Rxbztgj5CfwS','admin','Plaza Iglesia N4','Spainn',46761,'Valencia'),(32,'blascogasconiban@hotmail.es','ivanlol','$2y$10$7qvAhmG5WTew4VrcHmuO5ubsxGnUHsvZJNgy8iT.r7SjX8kcqvaZm','admin',NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `compras`
+--
+
+DROP TABLE IF EXISTS `compras`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `compras` (
+  `num_transaccion` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_compra` int(10) DEFAULT NULL,
+  `id_usuario` int(10) DEFAULT NULL,
+  `libro` int(10) DEFAULT NULL,
+  `cantidad` int(10) DEFAULT NULL,
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `precio` int(10) DEFAULT NULL,
+  PRIMARY KEY (`num_transaccion`)
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `compras`
+--
+
+LOCK TABLES `compras` WRITE;
+/*!40000 ALTER TABLE `compras` DISABLE KEYS */;
+INSERT INTO `compras` VALUES (20,1,11,13,1,'2018-02-19 08:41:44',21),(21,1,11,3,1,'2018-02-19 08:41:44',40),(22,1,11,5,1,'2018-02-19 08:41:44',15),(23,2,11,7,1,'2018-02-19 08:42:05',8),(24,2,11,14,1,'2018-02-19 08:42:05',19),(25,3,11,4,4,'2018-02-19 08:42:19',16),(26,4,11,4,1,'2018-02-19 12:39:24',6),(27,5,11,3,1,'2018-02-19 12:47:13',32),(28,6,11,4,1,'2018-02-19 12:47:31',6),(29,6,11,3,1,'2018-02-19 12:47:32',32),(30,7,11,4,1,'2018-02-19 12:47:58',6),(31,7,11,3,1,'2018-02-19 12:47:59',32),(32,8,11,7,1,'2018-02-19 14:05:42',4),(33,8,11,13,1,'2018-02-19 14:05:42',21),(34,9,11,13,10,'2018-02-20 14:30:18',21),(35,9,11,5,1,'2018-02-20 14:30:18',15),(36,10,11,5,1,'2018-02-22 08:49:29',15),(37,11,11,32,1,'2018-02-23 19:32:34',40),(38,11,11,41,1,'2018-02-23 19:32:34',20),(39,11,11,23,1,'2018-02-23 19:32:34',22),(40,11,11,42,1,'2018-02-23 19:32:34',9),(41,11,11,38,1,'2018-02-23 19:32:34',20),(42,11,11,33,1,'2018-02-23 19:32:34',0),(43,11,11,27,1,'2018-02-23 19:32:34',7);
+/*!40000 ALTER TABLE `compras` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `libros`
+--
+
+DROP TABLE IF EXISTS `libros`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `libros` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) DEFAULT NULL,
+  `editorial` varchar(255) DEFAULT NULL,
+  `autor` varchar(255) DEFAULT NULL,
+  `isbn` varchar(15) DEFAULT NULL,
+  `precio` int(5) DEFAULT NULL,
+  `oferta` int(2) DEFAULT '0',
+  `categorias` varchar(255) DEFAULT NULL,
+  `add_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `veces_vendido` int(10) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  FULLTEXT KEY `ind_libros` (`nombre`,`editorial`,`autor`,`isbn`,`categorias`)
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `libros`
+--
+
+LOCK TABLES `libros` WRITE;
+/*!40000 ALTER TABLE `libros` DISABLE KEYS */;
+INSERT INTO `libros` VALUES (3,'LA LLAMADA DE CTHULHU','VALDEMAR','H.P Lovecraft','9788415618683',42,20,'horror','2018-02-13 12:40:47',5),(4,'EL NECRONOMICON','VALDEMAR','H.P Lovecraft','9788441435018',16,60,'horror','2018-02-13 12:40:47',4),(5,'LOS MITOS DE CTHULHU: NARRACIONES DE HORROR COSMICO','VALDEMAR','H.P Lovecraft','9788420643342',15,0,'horror','2018-02-13 12:40:47',2),(6,'EL CASO DE CHARLES DEXTER WARD','VALDEMAR','H.P Lovecraft','9788477027096',9,0,'horror','2018-02-13 12:40:47',0),(7,'EN LAS MONTAÃ‘AS DE LA LOCURA','VALDEMAR','H.P Lovecraft','9788477026181',8,50,'horror','2018-02-13 12:40:47',1),(8,'EL HORROR EN EL CEMENTERIO','VALDEMAR','H.P Lovecraft','9788441415003',3,50,'horror','2018-02-13 12:40:47',0),(9,'LA SOMBRA SOBRE INNSMOUTH','VALDEMAR','H.P Lovecraft','9788492769926',20,0,'horror','2018-02-13 12:40:47',0),(10,'EL HORROR DE DUNWICH','VALDEMAR','H.P Lovecraft','9788420676623',10,0,'horror','2018-02-13 12:40:47',0),(11,'LA SOMBRA DEL MAS ALLA DEL TIEMPO','VALDEMAR','H.P Lovecraft','9788441414983',3,0,'horror','2018-02-13 12:40:47',0),(12,'LA GUARIDA DEL HORROR','VALDEMAR','H.P Lovecraft','9788490947616',15,0,'horror','2018-02-13 12:40:47',0),(13,'ORIGEN','PLANETA','DAN BROWN','9788408177081',21,0,'psychology','2018-02-13 12:56:35',2),(14,'LA RUEDA CELESTE','MINOTAURO','URSULA K. LE GUIN','9788445004258',19,1,'contemporary','2018-02-19 07:29:22',0),(15,'EL GESTO DE HÃ‰CTOR','TAURUS','LUIGI ZOJA','9788430619313',23,5,'psychology','2018-02-23 18:59:15',0),(16,'LA MEJOR MEDALLA: SU EDUCACIÃ“N','GRIJALBO','FRANCISCO CASTAÃ‘O MENA','9788425355813',17,5,'psychology','2018-02-23 19:00:50',0),(17,'UNA MEMORIA INFALIBLE: BRILLA EN SOCIEDAD SIN USAR TU SMARTPHONE','PLANETA','SEBASTIEN MARTINEZ ','9788408180951',16,0,'psychology','2018-02-23 19:03:02',0),(18,'INTELIGENCIA EMOCIONAL','KAIROS','DANIEL GOLEMAN','9788472453715',18,5,'psychology','2018-02-23 19:04:30',0),(19,'EL BOSQUE PEDAGOGICO','ARIEL','JOSE ANTONIO MARINA','9788434427051',17,0,'psychology','2018-02-23 19:05:18',0),(20,'APEGO Y PSICOPATOLOGIA: LA ANSIEDAD Y SU ORIGEN. ','MANUEL HERNANDEZ PACHECHO','DECLEE','9788433029492',22,0,'psychology','2018-02-23 19:06:10',0),(21,'PSICOMETRIA: TEORIA Y FORMULARIO','SANZ Y TORRES','ENRIQUE','9788415550891',41,0,'psychology','2018-02-23 19:06:59',0),(22,'LAS ESCUELAS QUE CAMBIAN EL MUNDO','PLAZA','CESAR BONA','9788401017490',18,0,'psychology','2018-02-23 19:07:51',0),(23,'CARMEN, LA REBELDE','PLANETA','PILAR EYRE','9788408181446',22,0,'contemporary','2018-02-23 19:07:55',1),(24,'EL CEREBRO DEL NIÃ‘O','ALBA','TINA PAYNE BRYSON ','9788484287148',22,0,'psychology','2018-02-23 19:08:42',0),(25,'UN ANDAR SOLITARIO ENTRE LA GENTE','SEIX BARRAL','ANTONIO MUÃ‘OZ MOLINA','9788432233500',21,0,'contemporary','2018-02-23 19:09:55',0),(26,'LO ÃšNICO QUE IMPORTA','GRIJALBO','AGNES LEDIG','9788425355929',15,4,'contemporary','2018-02-23 19:11:58',0),(27,' VOLAR','EDITORIAL DE MIERDA','YOLANDA REYES','9786071650610',7,0,'youth','2018-02-23 19:12:21',1),(28,'CINDER Y ELLA','OZ EDITORIAL','KELLY ORAM','9788416224784',18,0,'youth','2018-02-23 19:12:52',0),(29,'DESVIACION','SEIX BARRAL','LUCE D ERAMO','9788432233401',21,10,'contemporary','2018-02-23 19:13:16',0),(30,'EL SILENCIO DE LA CIUDAD BLANCA','PLANETA','EVA GARCIA','9788408154167',20,15,'black','2018-02-23 19:14:36',0),(31,'FRACTURA','ALFAGUARA','ANDRES NEUMAN','9788420432427',22,0,'contemporary','2018-02-23 19:14:44',0),(32,'LOS RITOS DEL AGUA','PLANETA','EVA GARCIA','9788408169451',50,20,'black','2018-02-23 19:15:04',1),(33,'DIE GESCHICHTE DES VERLORENEN KINDES','SHURKMAP','ELENA','9783518425763',1,99,'romance','2018-02-23 19:16:11',1),(34,'QUE NADIE DUERMA ','ALFAGUARA','JUAN JOSE MILLAS','9788420432953',16,5,'contemporary','2018-02-23 19:16:21',0),(35,'Â¿Y A TI QUE TE PASA?','PLANETA','MEGAN MAXWELL','9788408181484',1,99,'romance','2018-02-23 19:16:53',0),(36,'LOS PACIENTES DEL DOCTOR GARCIA','TUSQUETS EDITORES','ALMUDENA GRANDES ','9788490664322',19,15,'contemporary','2018-02-23 19:17:30',0),(38,'EL MANUSCRITO DE FUEGO','S.L.U. ESPASA LIBROS','LUIS GARCIA JAMBRINA','9788467051087',20,0,'historical','2018-02-23 19:19:03',1),(39,'EL REY FELON','VALDEMAR','JOSE LUIS','9788435060790',6,0,'historical','2018-02-23 19:20:01',0),(40,'LIGA DE LA JUSTICIA: LIGA DE LA INJUSTICIA','ECC','GEOFF JOHNS','9788417276065',25,0,'comics','2018-02-23 19:21:28',0),(41,'EL RENACIMIENTO DE THANOS','PANINI','JIM STARLIN','9788491672845',20,0,'comics','2018-02-23 19:22:09',1),(42,'EL NEGACIONISMO ECONOMICO','DEUSTO S.A. EDICIONES','PIERRE CAHUC','9788423429042',9,0,'economics','2018-02-23 19:26:39',1),(43,'RENTA BASICA INCONDICIONAL','EL SERBAL','VV.AA','9788476289198',18,0,'economics','2018-02-23 19:27:15',0);
+/*!40000 ALTER TABLE `libros` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `problemas`
+--
+
+DROP TABLE IF EXISTS `problemas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `problemas` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `problema` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `problemas`
+--
+
+LOCK TABLES `problemas` WRITE;
+/*!40000 ALTER TABLE `problemas` DISABLE KEYS */;
+INSERT INTO `problemas` VALUES (1,'blascogasconiban@hotmail.es','Mi problema es que sois gays'),(3,'ivanblasco@gmail.c','queascopordios'),(4,'blascogasconiban@hotmail.es','querarono?'),(5,'alexlopezmelo@gmail.com','Hola mi problema es que soy retrasado.'),(6,'blascogasconiban@hotmail.es','polla'),(7,'blascogasconiban@hotmail.es','emcagueendeu'),(8,'blascogasconiban@hotmail.es','emcagueendeu');
+/*!40000 ALTER TABLE `problemas` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-02-23 20:44:26
